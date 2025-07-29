@@ -1,0 +1,87 @@
+@use '../abstracts/mixins' as *;
+
+header {
+
+    @include flex(space-around, center);
+
+    .logo {
+        width: 100px;
+        height: 40px;
+
+        img {
+            @include img();
+        }
+    }
+
+    nav {
+        padding: 8px 0;
+
+        .nav-tabs {
+
+            border: none;
+
+            .nav-item,
+            .dropdown {
+
+                .nav-link {
+                    @include flex(center, center, 8px);
+                    color: var(--Neutral-colors-Black, #010203);
+                    font-size: 14px;
+                    font-weight: 400;
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+
+
+                .dropdown-menu {
+                    padding: 32px 24px;
+                    min-width: 307px;
+                    border: none;
+
+                    .dropdown-item {
+                        @include flex(space-between, center);
+                        padding: 12px;
+                        color: rgba(1, 2, 3, 0.70);
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+    }
+
+    .header-actions {
+        @include flex(flex-start, center, 12px);
+
+        .btn-group {
+
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+            .select-language {
+                border-radius: 6px;
+                background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
+            }
+
+        }
+    }
+
+}

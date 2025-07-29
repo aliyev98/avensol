@@ -1,0 +1,102 @@
+@use '../abstracts/mixins' as *;
+
+.homepage-container {
+    background-color: #fff;
+
+    .hero-section {
+        position: relative;
+        height: 585px;
+
+        img {
+            @include img()
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-20%, -50%);
+
+            h1 {
+                color: var(--Neutral-colors-White, #FFF);
+                font-size: 72px;
+                font-weight: 500;
+            }
+
+            p {
+                color: var(--Neutral-colors-White, #FFF);
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+
+    section {
+
+        @include flex(center, center, 50px, column);
+
+        .section-header {
+
+            @include flex(center, center, 16px, column);
+
+            .section-header-name {
+                color: var(--Brand-color-Brand-color, #C90200);
+                text-align: center;
+                font-size: 12px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            .section-header-title {
+                color: #2D2D2D;
+                text-align: center;
+                font-size: 32px;
+                font-weight: 500;
+            }
+
+
+            .section-header-info {
+                color: rgba(45, 45, 45, 0.50);
+                text-align: center;
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+        }
+
+        .section-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+
+            .section-item {
+                @include flex(center, center, 16px, column);
+                padding: 16px;
+                border-radius: 6px;
+                border: 1px solid #E9E9E9;
+
+                .item-name {
+                    color: var(--Neutral-colors-Black, #010203);
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+
+                .item-info {
+                    color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.50));
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .where-we-do-section {
+
+        padding: 50px 200px;
+
+    }
+
+}
