@@ -1,0 +1,38 @@
+@use '../abstracts/mixins' as *;
+
+.service-info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    .card-item {
+        @include flex(center, center, 16px, column);
+        padding: 16px;
+        border-radius: 6px;
+        border: 1px solid #E9E9E9;
+        cursor: pointer;
+        transition: .2s all ease-in;
+
+        &:hover {
+            background-color: #C90200;
+
+            span {
+                color: white;
+            }
+
+        }
+
+        .item-name {
+            color: var(--Neutral-colors-Black, #010203);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .item-info {
+            color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.50));
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}

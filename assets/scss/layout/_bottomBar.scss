@@ -1,0 +1,32 @@
+.bottom-bar {
+    padding: 16px 200px;
+    background: #272729;
+
+    div{
+        gap: 72px;
+    }
+
+    span {
+        color: var(--Neutral-colors-White, #FFF);
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .social-media-links {
+        gap: 24px;
+
+        a {
+            width: 36px;
+            height: 36px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid var(--Neutral-colors-White-50, rgba(255, 255, 255, 0.50));
+            background: var(--Neutral-colors-White-15, rgba(255, 255, 255, 0.15));
+            cursor: pointer;
+            z-index: 9;
+        }
+    }
+
+
+}

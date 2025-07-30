@@ -4,4 +4,10 @@ body{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;;
     background-color: #ececec;
+
+    .container{
+        overflow: hidden;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
 }

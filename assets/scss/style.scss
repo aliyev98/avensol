@@ -5,8 +5,11 @@
 //layouts
 @use './layout/topbar';
 @use './layout/header';
+@use './layout/footer';
+@use './layout/bottomBar';
 
 //components
+@use './components/serviceInfoCards';
 
 //pages
 @use './pages/index';
