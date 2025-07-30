@@ -6,10 +6,10 @@
 @use './layout/topbar';
 @use './layout/header';
 @use './layout/footer';
-@use './layout/bottomBar';
+@use './layout/bottombar';
 
 //components
-@use './components/service_info_cards';
+@use './components/servicecard';
 
 //pages
 @use './pages/index';
