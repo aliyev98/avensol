@@ -1,8 +1,7 @@
 @use '../abstracts/mixins' as *;
 
 header {
-
-    @include flex(space-around, center);
+    padding: 8px 100px;
 
     .logo {
         width: 100px;
@@ -68,7 +67,11 @@ header {
     }
 
     .header-actions {
-        @include flex(flex-start, center, 12px);
+        gap: 12px;
+
+        button{
+            font-size: 14px;
+        }
 
         .btn-group {
 

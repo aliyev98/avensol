@@ -4,28 +4,14 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background-color: #ececec;
-}
-body .container {
-  overflow: hidden;
-  margin-top: 40px;
-  margin-bottom: 40px;
 }
 
 .topbar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: "row";
   gap: 24px;
   background: #272729;
   padding: 8px 50px;
 }
 .topbar div {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: "row";
   gap: 12px;
 }
 .topbar div span {
@@ -35,11 +21,7 @@ body .container {
 }
 
 header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: "row";
-  gap: 0;
+  padding: 8px 100px;
 }
 header .logo {
   width: 100px;
@@ -101,11 +83,10 @@ header nav .dropdown-toggle::after {
   display: none;
 }
 header .header-actions {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: "row";
   gap: 12px;
+}
+header .header-actions button {
+  font-size: 14px;
 }
 header .header-actions .btn-group .dropdown-toggle::after {
   display: none;
@@ -120,6 +101,7 @@ footer {
   position: relative;
   padding: 32px 100px;
   gap: 40px;
+  overflow: hidden;
 }
 footer .footer-bg-img {
   position: absolute;
@@ -188,39 +170,210 @@ footer .footer-bottom div a {
   z-index: 9;
 }
 
-.service-info-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.features-section {
+  padding: 50px 200px;
+  gap: 50px;
+}
+.features-section .section-heading {
   gap: 16px;
 }
-.service-info-cards .card-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.features-section .section-heading .section-title {
+  color: var(--Brand-color-Brand-color, #C90200);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.features-section .section-heading h1 {
+  color: #2D2D2D;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+}
+.features-section .section-heading .section-decription {
+  color: rgba(45, 45, 45, 0.5);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+.features-section .section-cards {
   gap: 16px;
+}
+.features-section .section-cards .section-card {
   padding: 16px;
   border-radius: 6px;
   border: 1px solid #E9E9E9;
-  cursor: pointer;
-  transition: 0.2s all ease-in;
+  background: #FFF;
 }
-.service-info-cards .card-item:hover {
-  background-color: #C90200;
+.features-section .section-cards .section-card svg {
+  margin-bottom: 12px;
 }
-.service-info-cards .card-item:hover span {
-  color: white;
-}
-.service-info-cards .card-item .item-name {
+.features-section .section-cards .section-card .card-name {
   color: var(--Neutral-colors-Black, #010203);
   font-size: 18px;
   font-weight: 500;
+  margin-bottom: 16px;
 }
-.service-info-cards .card-item .item-info {
+.features-section .section-cards .section-card .card-description {
   color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
   text-align: center;
   font-size: 14px;
   font-weight: 400;
+}
+
+.homepage-container .hero-section {
+  position: relative;
+  height: 585px;
+}
+.homepage-container .hero-section img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage-container .hero-section .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-20%, -50%);
+}
+.homepage-container .hero-section .hero-content h1 {
+  color: var(--Neutral-colors-White, #FFF);
+  font-size: 72px;
+  font-weight: 500;
+}
+.homepage-container .hero-section .hero-content p {
+  color: var(--Neutral-colors-White, #FFF);
+  font-size: 14px;
+  font-weight: 400;
+}
+.homepage-container .values-and-sustainability-section {
+  padding: 70px 200px;
+  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+  gap: 37px;
+}
+.homepage-container .values-and-sustainability-section .section-intro {
+  gap: 16px;
+  width: 50%;
+}
+.homepage-container .values-and-sustainability-section .section-intro .section-title {
+  color: var(--Brand-color-Brand-color, #C90200);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.homepage-container .values-and-sustainability-section .section-intro .intro-name {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 32px;
+  font-weight: 500;
+}
+.homepage-container .values-and-sustainability-section .section-intro .intro-description {
+  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
+  font-size: 14px;
+  font-weight: 400;
+}
+.homepage-container .values-and-sustainability-section .section-intro .intro-picture {
+  margin-top: 16px;
+  width: 362px;
+  height: 217px;
+}
+.homepage-container .values-and-sustainability-section .section-intro .intro-picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage-container .values-and-sustainability-section .section-cards {
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+.homepage-container .values-and-sustainability-section .section-cards .section-card {
+  padding: 16px;
+  gap: 16px;
+}
+.homepage-container .values-and-sustainability-section .section-cards .section-card .card-icon {
+  padding: 8px;
+  border-radius: 6px;
+  background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.homepage-container .values-and-sustainability-section .section-cards .section-card .card-name {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 18px;
+  font-weight: 500;
+}
+.homepage-container .values-and-sustainability-section .section-cards .section-card .card-description {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 14px;
+  font-weight: 400;
+}
+.homepage-container .our-news-section {
+  padding: 50px 100px;
+  gap: 50px;
+}
+.homepage-container .our-news-section .our-news-video {
+  width: 80%;
+  height: 350px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.homepage-container .our-news-section .our-news-video img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage-container .our-news-section .our-news-intro .section-title {
+  color: var(--Brand-color-Brand-color, #C90200);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.homepage-container .our-news-section .our-news-intro .intro-title {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.homepage-container .our-news-section .our-news-intro .intro-description {
+  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.homepage-container .our-news-section .our-news-intro .certificate {
+  gap: 16px;
+}
+.homepage-container .our-news-section .our-news-intro .certificate .certificate-img {
+  width: 224px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.homepage-container .our-news-section .our-news-intro .certificate .certificate-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage-container .our-news-section .our-news-intro .certificate .certificate-infos .certificate-date {
+  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.homepage-container .our-news-section .our-news-intro .certificate .certificate-infos .certificate-title {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.homepage-container .our-news-section .our-news-intro .certificate .certificate-infos .learn-more {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 16px;
+  gap: 10px;
 }
 
 .homepage-container {
@@ -345,7 +498,7 @@ footer .footer-bottom div a {
   gap: 50px;
 }
 .homepage-container .our-news-section .our-news-video {
-  width: 80%;
+  width: 595px;
   height: 350px;
   border-radius: 6px;
   overflow: hidden;

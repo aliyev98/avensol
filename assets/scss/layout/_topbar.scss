@@ -1,22 +1,19 @@
 @use '../abstracts/mixins' as *;
 
-
 .topbar {
-
-    @include flex(flex-end, center, 24px);
-
+    gap: 24px;
     background: #272729;
     padding: 8px 50px;
 
     div {
-        @include flex(flex-start, center, 12px);
+        gap: 12px;
 
         span {
             color: var(--Neutral-colors-White, #FFF);
             font-size: 12px;
             font-weight: 400;
         }
-        
+
     }
 
 
