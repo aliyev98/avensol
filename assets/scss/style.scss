@@ -10,6 +10,9 @@
 
 //components
 @use './components/features-section';
+@use './components/text-image-section';
+@use './components/image-info-grid-section';
+@use './components/text-image-description-section';
 
 //pages
 @use './pages/index';

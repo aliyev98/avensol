@@ -1,0 +1,29 @@
+@use '../abstracts/mixins' as *;
+
+.text-image-description-section {
+    padding: 50px 200px 100px 200px;
+    gap: 32px;
+
+    .section-header {
+        gap: 16px;
+    }
+
+    .section-body {
+
+        .description {
+            color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+
+        .img {
+
+            img {
+                @include img();
+            }
+        }
+    }
+}
