@@ -190,13 +190,6 @@ footer .footer-bottom div a {
 .features-section .section-heading {
   gap: 16px;
 }
-.features-section .section-heading .section-title {
-  color: var(--Brand-color-Brand-color, #C90200);
-  text-align: center;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
 .features-section .section-heading h1 {
   color: #2D2D2D;
   text-align: center;
@@ -242,12 +235,6 @@ footer .footer-bottom div a {
   width: 50%;
   gap: 16px;
 }
-.text-image-section .text-side .title {
-  color: var(--Brand-color-Brand-color, #C90200);
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
 .text-image-section .text-side .description {
   color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
   font-size: 14px;
@@ -255,7 +242,7 @@ footer .footer-bottom div a {
   line-height: 20px;
 }
 .text-image-section .image-side {
-  width: 40%;
+  width: 50%;
 }
 .text-image-section .image-side img {
   width: 100%;
@@ -270,13 +257,6 @@ footer .footer-bottom div a {
 }
 .image-info-grid-section .left-side {
   width: 50% !important;
-}
-.image-info-grid-section .left-side .title {
-  color: #C90200;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-bottom: 16px;
 }
 .image-info-grid-section .left-side .img {
   margin-top: 32px;
@@ -361,12 +341,6 @@ footer .footer-bottom div a {
   gap: 16px;
   width: 50%;
 }
-.homepage-container .values-and-sustainability-section .section-intro .section-title {
-  color: var(--Brand-color-Brand-color, #C90200);
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
 .homepage-container .values-and-sustainability-section .section-intro .intro-name {
   color: var(--Neutral-colors-Black, #010203);
   font-size: 32px;
@@ -428,12 +402,6 @@ footer .footer-bottom div a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.homepage-container .our-news-section .our-news-intro .section-title {
-  color: var(--Brand-color-Brand-color, #C90200);
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 .homepage-container .our-news-section .our-news-intro .intro-title {
   color: var(--Neutral-colors-Black, #010203);

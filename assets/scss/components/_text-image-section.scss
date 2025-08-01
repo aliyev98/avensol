@@ -8,13 +8,6 @@
         width: 50%;
         gap: 16px;
 
-        .title {
-            color: var(--Brand-color-Brand-color, #C90200);
-            font-size: 12px;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
-
         .description {
             color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.50));
             font-size: 14px;
@@ -24,7 +17,7 @@
     }
 
     .image-side {
-        width: 40%;
+        width: 50%;
 
         img {
             @include img();
