@@ -1,0 +1,27 @@
+.values-and-sustainability-container {
+
+    .values-and-sustainability {
+        background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+
+        .section-intro {
+            padding: 100px 50px 100px 200px;
+        }
+    }
+
+    .sustainabilty-practise {
+        padding: 100px 200px 50px 200px;
+
+        .section-text {
+            width: 70%;
+            
+            p {
+                color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+            }
+
+        }
+    }
+}

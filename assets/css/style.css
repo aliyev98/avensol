@@ -6,19 +6,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.line {
-  height: 1px;
-  background: var(--Neutral-colors-Gray, #E9E9E9);
-}
-
-.section-title {
-  color: var(--Brand-color-Brand-color, #C90200);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14px;
-  text-transform: uppercase;
-}
-
 .topbar {
   gap: 24px;
   background: #272729;
@@ -183,72 +170,32 @@ footer .footer-bottom div a {
   z-index: 9;
 }
 
-.features-section {
-  padding: 50px 200px;
-  gap: 50px;
-}
-.features-section .section-heading {
-  gap: 16px;
-}
-.features-section .section-heading h1 {
-  color: #2D2D2D;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 500;
-}
-.features-section .section-heading .section-decription {
-  color: rgba(45, 45, 45, 0.5);
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-}
-.features-section .section-cards {
-  gap: 16px;
-}
-.features-section .section-cards .section-card {
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 16px;
   border-radius: 6px;
   border: 1px solid #E9E9E9;
   background: #FFF;
+  cursor: pointer;
 }
-.features-section .section-cards .section-card svg {
-  margin-bottom: 12px;
-}
-.features-section .section-cards .section-card .card-name {
+.feature-card-title {
   color: var(--Neutral-colors-Black, #010203);
   font-size: 18px;
+  font-style: normal;
   font-weight: 500;
-  margin-bottom: 16px;
+  line-height: 140%;
+  margin-top: 12px;
 }
-.features-section .section-cards .section-card .card-description {
+.feature-card-description {
   color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
   text-align: center;
   font-size: 14px;
-  font-weight: 400;
-}
-
-.text-image-section {
-  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
-}
-.text-image-section .text-side {
-  padding: 100px 50px 100px 200px;
-  width: 50%;
-  gap: 16px;
-}
-.text-image-section .text-side .description {
-  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
-  font-size: 14px;
+  font-style: normal;
   font-weight: 400;
   line-height: 20px;
-}
-.text-image-section .image-side {
-  width: 50%;
-}
-.text-image-section .image-side img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  margin-top: 16px;
 }
 
 .image-info-grid-section {
@@ -274,12 +221,12 @@ footer .footer-bottom div a {
 .image-info-grid-section .right-side div {
   gap: 12px;
 }
-.image-info-grid-section .right-side div span:first-child {
+.image-info-grid-section .right-side div .text-title {
   color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
   font-size: 16px;
   font-weight: 600;
 }
-.image-info-grid-section .right-side div span:last-child() {
+.image-info-grid-section .right-side div .title {
   color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
   font-size: 14px;
   font-weight: 400;
@@ -304,6 +251,147 @@ footer .footer-bottom div a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.split-content-section {
+  gap: 50px;
+  padding: 50px 200px 100px 200px;
+}
+.split-content-section .section-body .left-side {
+  width: 48%;
+}
+.split-content-section .section-body .left-side p {
+  color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.split-content-section .section-body .right-side {
+  width: 48%;
+}
+.split-content-section .section-body .right-side .cards {
+  gap: 32px;
+}
+.split-content-section .section-body .right-side .cards .card {
+  padding: 0 16px;
+  border: none;
+  border-left: 1.5px solid var(--Brand-color-Brand-color, #C90200);
+  border-radius: 0;
+  gap: 16px;
+}
+.split-content-section .section-body .right-side .cards .card .card-header {
+  gap: 16px;
+  border-bottom: none;
+  background-color: transparent;
+  padding: 0;
+}
+.split-content-section .section-body .right-side .cards .card .card-header .card-icon {
+  padding: 8px;
+  border-radius: 6px;
+  background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
+}
+.split-content-section .section-body .right-side .cards .card .card-header .card-title {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 0;
+}
+
+.line {
+  height: 1px;
+  background: var(--Neutral-colors-Gray, #E9E9E9);
+}
+
+.section-name {
+  color: var(--Brand-color-Brand-color, #C90200);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.section-info {
+  color: rgba(45, 45, 45, 0.5);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.section-large-scale-title {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.section-description {
+  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
+.p-50-200 {
+  padding: 50px 200px;
+}
+
+.p-50-100 {
+  padding: 50px 100px;
+}
+
+.icon-bg {
+  padding: 8px;
+  border-radius: 6px;
+  background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.section-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: url(<path-to-image>) lightgray 50%/cover no-repeat;
+}
+
+.section-header {
+  gap: 16px;
+}
+
+.section-gapped {
+  gap: 50px;
+}
+
+.section-intro {
+  gap: 16px;
+}
+.section-intro .section-img {
+  margin-top: 16px;
 }
 
 .homepage-container .hero-section {
@@ -332,63 +420,56 @@ footer .footer-bottom div a {
   font-size: 14px;
   font-weight: 400;
 }
-.homepage-container .values-and-sustainability-section {
-  padding: 70px 200px;
-  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
-  gap: 37px;
+.homepage-container .where-we-do {
+  padding: 50px 200px;
 }
-.homepage-container .values-and-sustainability-section .section-intro {
+.homepage-container .where-we-do .feature-cards {
   gap: 16px;
+}
+.homepage-container .what-we-do {
+  padding: 50px 200px;
+}
+.homepage-container .what-we-do .feature-cards {
+  gap: 16px;
+}
+.homepage-container .values-and-sustainability {
+  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+  padding: 70px var(--200px, 200px);
+  gap: 50px;
+}
+.homepage-container .values-and-sustainability .section-intro {
   width: 50%;
 }
-.homepage-container .values-and-sustainability-section .section-intro .intro-name {
-  color: var(--Neutral-colors-Black, #010203);
-  font-size: 32px;
-  font-weight: 500;
+.homepage-container .values-and-sustainability-cards {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
-.homepage-container .values-and-sustainability-section .section-intro .intro-description {
-  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
-  font-size: 14px;
-  font-weight: 400;
-}
-.homepage-container .values-and-sustainability-section .section-intro .intro-picture {
-  margin-top: 16px;
-  width: 362px;
-  height: 217px;
-}
-.homepage-container .values-and-sustainability-section .section-intro .intro-picture img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.homepage-container .values-and-sustainability-section .section-cards {
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-}
-.homepage-container .values-and-sustainability-section .section-cards .section-card {
-  padding: 16px;
+.homepage-container .values-and-sustainability-cards .card {
   gap: 16px;
+  padding: 16px;
+  background-color: transparent;
+  border: none;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-.homepage-container .values-and-sustainability-section .section-cards .section-card .card-icon {
-  padding: 8px;
-  border-radius: 6px;
-  background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.homepage-container .values-and-sustainability-section .section-cards .section-card .card-name {
+.homepage-container .values-and-sustainability-cards .card .card-title {
   color: var(--Neutral-colors-Black, #010203);
   font-size: 18px;
+  font-style: normal;
   font-weight: 500;
+  line-height: 26px;
 }
-.homepage-container .values-and-sustainability-section .section-cards .section-card .card-description {
+.homepage-container .values-and-sustainability-cards .card p {
   color: var(--Neutral-colors-Black, #010203);
   font-size: 14px;
+  font-style: normal;
   font-weight: 400;
+  line-height: 20px;
 }
 .homepage-container .our-news-section {
-  padding: 50px 100px;
+  padding: 50px 100px 100px 100px;
   gap: 50px;
 }
 .homepage-container .our-news-section .our-news-video {
@@ -402,19 +483,6 @@ footer .footer-bottom div a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.homepage-container .our-news-section .our-news-intro .intro-title {
-  color: var(--Neutral-colors-Black, #010203);
-  font-size: 32px;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-.homepage-container .our-news-section .our-news-intro .intro-description {
-  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  margin-bottom: 12px;
 }
 .homepage-container .our-news-section .our-news-intro .certificate {
   gap: 16px;
@@ -447,6 +515,78 @@ footer .footer-bottom div a {
   width: fit-content;
   padding: 8px 16px;
   gap: 10px;
+}
+
+.values-and-sustainability-container .values-and-sustainability {
+  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+}
+.values-and-sustainability-container .values-and-sustainability .section-intro {
+  padding: 100px 50px 100px 200px;
+}
+.values-and-sustainability-container .sustainabilty-practise {
+  padding: 100px 200px 50px 200px;
+}
+.values-and-sustainability-container .sustainabilty-practise .section-text {
+  width: 70%;
+}
+.values-and-sustainability-container .sustainabilty-practise .section-text p {
+  color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.who-we-are-container .who-we-are {
+  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+}
+.who-we-are-container .who-we-are .section-intro {
+  padding: 100px 50px 100px 200px;
+}
+.who-we-are-container .our-identity-vision {
+  padding: 100px 200px 50px 200px;
+}
+.who-we-are-container .our-identity-vision .section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.who-we-are-container .our-identity-vision .section-text .paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.who-we-are-container .our-identity-vision .section-text .paragraph .text-title {
+  color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.who-we-are-container .our-identity-vision .section-text .paragraph .text-content {
+  color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.who-we-are-container .our-team {
+  padding: 50px 200px 100px 200px;
+  gap: 32px;
+}
+.who-we-are-container .our-team .section-header .section-title p {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 140%;
+}
+.who-we-are-container .our-team .section-body .text-content {
+  color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .homepage-container {

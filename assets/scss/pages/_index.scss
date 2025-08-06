@@ -31,71 +31,72 @@
 
     }
 
-    .values-and-sustainability-section {
-        padding: 70px 200px;
-        background: var(--Neutral-colors-Light-Gray, #F8F9FA);
-        gap: 37px;
+    .where-we-do {
+        padding: 50px 200px;
 
-        .section-intro {
+        .feature-cards {
             gap: 16px;
-            width: 50%;
-
-            .intro-name {
-                color: var(--Neutral-colors-Black, #010203);
-                font-size: 32px;
-                font-weight: 500;
-            }
-
-            .intro-description {
-                color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.50));
-                font-size: 14px;
-                font-weight: 400;
-            }
-
-            .intro-picture {
-                margin-top: 16px;
-                width: 362px;
-                height: 217px;
-
-                img {
-                    @include img();
-                }
-            }
-        }
-
-        .section-cards {
-            column-gap: 24px;
-
-            .section-card {
-                padding: 16px;
-                gap: 16px;
-
-                .card-icon {
-                    padding: 8px;
-                    border-radius: 6px;
-                    background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
-                    width: fit-content;
-                }
-
-                .card-name {
-                    color: var(--Neutral-colors-Black, #010203);
-                    font-size: 18px;
-                    font-weight: 500;
-                }
-
-                .card-description {
-                    color: var(--Neutral-colors-Black, #010203);
-                    font-size: 14px;
-                    font-weight: 400;
-                }
-
-            }
         }
 
     }
 
+    .what-we-do {
+        padding: 50px 200px;
+
+        .feature-cards {
+            gap: 16px;
+
+        }
+
+    }
+
+    .values-and-sustainability {
+        background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+        padding: 70px var(--200px, 200px);
+        gap: 50px;
+
+        .section-intro {
+            width: 50%;
+        }
+
+        &-cards {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+
+
+            .card {
+                gap: 16px;
+                padding: 16px;
+                background-color: transparent;
+                border: none;
+                height: fit-content;
+
+                .card-title {
+                    color: var(--Neutral-colors-Black, #010203);
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 26px;
+                }
+
+                p {
+                    color: var(--Neutral-colors-Black, #010203);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+            }
+
+
+
+        }
+    }
+
     .our-news-section {
-        padding: 50px 100px;
+        padding: 50px 100px 100px 100px;
         gap: 50px;
 
         .our-news-video {
@@ -110,21 +111,6 @@
         }
 
         .our-news-intro {
-
-            .intro-title {
-                color: var(--Neutral-colors-Black, #010203);
-                font-size: 32px;
-                font-weight: 500;
-                margin-bottom: 16px;
-            }
-
-            .intro-description {
-                color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.50));
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                margin-bottom: 12px;
-            }
 
             .certificate {
                 gap: 16px;

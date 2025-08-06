@@ -24,13 +24,13 @@
         div {
             gap: 12px;
 
-            span:first-child {
+            .text-title {
                 color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
                 font-size: 16px;
                 font-weight: 600;
             }
 
-            span:last-child() {
+            .title {
                 color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
                 font-size: 14px;
                 font-weight: 400;

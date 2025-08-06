@@ -8,15 +8,20 @@
 @use './layout/footer';
 @use './layout/bottombar';
 
+//cards
+
+@use './components/cards/features-card';
+
 //components
-@use './components/features-section';
-@use './components/text-image-section';
 @use './components/image-info-grid-section';
 @use './components/text-image-description-section';
+@use './components/split-content-section';
+@use './components/general';
 
 //pages
 @use './pages/index';
-
+@use './pages/values-sustainability';
+@use './pages/who-we-are';
 
 
 

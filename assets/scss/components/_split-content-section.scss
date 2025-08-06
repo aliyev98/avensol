@@ -1,0 +1,60 @@
+.split-content-section {
+    gap: 50px;
+    padding: 50px 200px 100px 200px;
+
+    .section-body {
+
+        .left-side {
+            width: 48%;
+
+            p {
+                color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+            }
+        }
+
+        .right-side {
+            width: 48%;
+
+            .cards {
+                gap: 32px;
+
+                .card {
+                    padding: 0 16px;
+                    border: none;
+                    border-left: 1.5px solid var(--Brand-color-Brand-color, #C90200);
+                    border-radius: 0;
+                    gap: 16px;
+
+                    .card-header {
+                        gap: 16px;
+                        border-bottom: none;
+                        background-color: transparent;
+                        padding: 0;
+
+                        .card-icon {
+                            padding: 8px;
+                            border-radius: 6px;
+                            background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
+
+                        }
+
+                        .card-title {
+                            color: var(--Neutral-colors-Black, #010203);
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 26px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
