@@ -11,11 +11,9 @@
 //cards
 
 @use './components/cards/features-card';
+@use './components/cards/leftBorderedCard';
 
 //components
-@use './components/image-info-grid-section';
-@use './components/text-image-description-section';
-@use './components/split-content-section';
 @use './components/general';
 
 //pages

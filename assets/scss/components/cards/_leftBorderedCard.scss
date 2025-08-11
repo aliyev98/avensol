@@ -1,0 +1,29 @@
+.left-bordered-card {
+    padding: 0 16px;
+    border-left: 1.5px solid var(--Brand-color-Brand-color, #C90200);
+    gap: 16px;
+    
+
+    .card-header {
+        gap: 16px;
+
+        .card-title {
+            color: var(--Neutral-colors-Black, #010203);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+        }
+    }
+
+    .card-body {
+
+        .card-info {
+            color: var(--Neutral-colors-Black, #010203);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+    }
+}
