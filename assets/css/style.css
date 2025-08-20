@@ -187,6 +187,7 @@ footer .footer-bottom div a {
   font-weight: 500;
   line-height: 140%;
   margin-top: 12px;
+  text-align: center;
 }
 .feature-card-description {
   color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
@@ -240,6 +241,7 @@ footer .footer-bottom div a {
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+  text-align: center;
 }
 
 .section-info {
@@ -297,7 +299,6 @@ footer .footer-bottom div a {
   width: 100%;
   height: auto;
   border-radius: 6px;
-  background: url(<path-to-image>) lightgray 50%/cover no-repeat;
 }
 
 .section-header {
@@ -359,13 +360,13 @@ footer .footer-bottom div a {
   gap: 50px;
 }
 .homepage-container .values-and-sustainability .section-intro {
-  width: 50%;
+  width: 30%;
 }
 .homepage-container .values-and-sustainability-cards {
-  flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  width: 70%;
 }
 .homepage-container .values-and-sustainability-cards .card {
   gap: 16px;
@@ -390,11 +391,10 @@ footer .footer-bottom div a {
   line-height: 20px;
 }
 .homepage-container .our-news-section {
-  padding: 50px 100px 100px 100px;
-  gap: 50px;
+  padding: 50px 100px 50px 100px;
 }
 .homepage-container .our-news-section .our-news-video {
-  width: 80%;
+  width: 40%;
   height: 350px;
   border-radius: 6px;
   overflow: hidden;
@@ -404,6 +404,9 @@ footer .footer-bottom div a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.homepage-container .our-news-section .our-news-intro {
+  width: 60%;
 }
 .homepage-container .our-news-section .our-news-intro .certificate {
   gap: 16px;
@@ -459,9 +462,7 @@ footer .footer-bottom div a {
 }
 .values-and-sustainability-container .core-values {
   padding: 50px 200px 100px;
-}
-.values-and-sustainability-container .core-values .text-content {
-  width: 50%;
+  background-color: green;
 }
 .values-and-sustainability-container .core-values .left-bordered-cards {
   gap: 32px;
@@ -471,15 +472,30 @@ footer .footer-bottom div a {
   background: var(--Neutral-colors-Light-Gray, #F8F9FA);
 }
 .who-we-are-container .who-we-are .section-intro {
+  width: 50%;
   padding: 100px 50px 100px 200px;
+}
+.who-we-are-container .who-we-are .section-image {
+  width: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .who-we-are-container .our-identity-vision {
   padding: 100px 200px 50px 200px;
+  background-color: green;
+}
+.who-we-are-container .our-identity-vision .section-intro {
+  width: 50%;
+  background-color: orange;
+}
+.who-we-are-container .our-identity-vision .section-intro .section-title {
+  text-align: left;
 }
 .who-we-are-container .our-identity-vision .section-text {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 50%;
 }
 .who-we-are-container .our-identity-vision .section-text .paragraph {
   display: flex;
@@ -517,189 +533,4 @@ footer .footer-bottom div a {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-}
-
-.homepage-container {
-  background-color: #fff;
-  padding: 0;
-}
-.homepage-container .hero-section {
-  position: relative;
-  height: 585px;
-}
-.homepage-container .hero-section img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.homepage-container .hero-section .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-20%, -50%);
-}
-.homepage-container .hero-section .hero-content h1 {
-  color: var(--Neutral-colors-White, #FFF);
-  font-size: 72px;
-  font-weight: 500;
-}
-.homepage-container .hero-section .hero-content p {
-  color: var(--Neutral-colors-White, #FFF);
-  font-size: 14px;
-  font-weight: 400;
-}
-.homepage-container .homepage-services-section {
-  padding: 50px 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 50px;
-}
-.homepage-container .homepage-services-section .section-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 16px;
-}
-.homepage-container .homepage-services-section .section-header .section-header-name {
-  color: var(--Brand-color-Brand-color, #C90200);
-  text-align: center;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.homepage-container .homepage-services-section .section-header .section-header-title {
-  color: #2D2D2D;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 500;
-}
-.homepage-container .homepage-services-section .section-header .section-header-info {
-  color: rgba(45, 45, 45, 0.5);
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-}
-.homepage-container .values-section {
-  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
-  padding: 70px 200px;
-  gap: 32px;
-}
-.homepage-container .values-section .values-intro {
-  gap: 16px;
-}
-.homepage-container .values-section .values-intro .section-title {
-  color: var(--Brand-color-Brand-color, #C90200);
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.homepage-container .values-section .values-intro .intro-title {
-  color: var(--Neutral-colors-Black, #010203);
-  font-size: 32px;
-  font-weight: 500;
-}
-.homepage-container .values-section .values-intro .intro-picture {
-  width: 362px;
-  height: 217px;
-}
-.homepage-container .values-section .values-intro .intro-picture img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.homepage-container .values-section .values-cards {
-  gap: 24px;
-}
-.homepage-container .values-section .values-cards .values-card {
-  gap: 16px;
-  padding: 16px;
-}
-.homepage-container .values-section .values-cards .values-card .card-img {
-  padding: 8px;
-  border-radius: 6px;
-  background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.homepage-container .values-section .values-cards .values-card .card-title {
-  color: var(--Neutral-colors-Black, #010203);
-  font-size: 18px;
-  font-weight: 500;
-}
-.homepage-container .values-section .values-cards .values-card .card-description {
-  color: var(--Neutral-colors-Black, #010203);
-  font-size: 14px;
-  font-weight: 400;
-}
-.homepage-container .our-news-section {
-  padding: 50px 100px;
-  gap: 50px;
-}
-.homepage-container .our-news-section .our-news-video {
-  width: 595px;
-  height: 350px;
-  border-radius: 6px;
-  overflow: hidden;
-}
-.homepage-container .our-news-section .our-news-video img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.homepage-container .our-news-section .our-news-intro .section-title {
-  color: var(--Brand-color-Brand-color, #C90200);
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.homepage-container .our-news-section .our-news-intro .intro-title {
-  color: var(--Neutral-colors-Black, #010203);
-  font-size: 32px;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-.homepage-container .our-news-section .our-news-intro .intro-description {
-  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  margin-bottom: 12px;
-}
-.homepage-container .our-news-section .our-news-intro .certificate {
-  gap: 16px;
-}
-.homepage-container .our-news-section .our-news-intro .certificate .certificate-img {
-  width: 224px;
-  border-radius: 6px;
-  overflow: hidden;
-}
-.homepage-container .our-news-section .our-news-intro .certificate .certificate-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.homepage-container .our-news-section .our-news-intro .certificate .certificate-infos .certificate-date {
-  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
-  font-size: 14px;
-  font-weight: 400;
-  margin-bottom: 8px;
-}
-.homepage-container .our-news-section .our-news-intro .certificate .certificate-infos .certificate-title {
-  color: var(--Neutral-colors-Black, #010203);
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-.homepage-container .our-news-section .our-news-intro .certificate .certificate-infos .learn-more {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 8px 16px;
-  gap: 10px;
 }/*# sourceMappingURL=style.css.map */

@@ -17,6 +17,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
+    text-align: center;
 }
 
 .section-info {
@@ -72,7 +73,10 @@
     width: 100%;
     height: auto;
     border-radius: 6px;
-    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.section-image{
+    
 }
 
 .section-header {

@@ -56,15 +56,14 @@
         gap: 50px;
 
         .section-intro {
-            width: 50%;
+            width: 30%;
         }
 
         &-cards {
-            flex-grow: 1;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
-
+            width: 70%;
 
             .card {
                 gap: 16px;
@@ -96,11 +95,10 @@
     }
 
     .our-news-section {
-        padding: 50px 100px 100px 100px;
-        gap: 50px;
+        padding: 50px 100px 50px 100px;
 
         .our-news-video {
-            width: 80%;
+            width: 40%;
             height: 350px;
             border-radius: 6px;
             overflow: hidden;
@@ -111,6 +109,7 @@
         }
 
         .our-news-intro {
+            width: 60%;
 
             .certificate {
                 gap: 16px;

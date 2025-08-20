@@ -1,22 +1,41 @@
 .who-we-are-container {
 
-
     .who-we-are {
         background: var(--Neutral-colors-Light-Gray, #F8F9FA);
 
         .section-intro {
+            width: 50%;
             padding: 100px 50px 100px 200px;
+        }
+
+        .section-image{
+            width: 50%;
+            height: fit-content;
         }
     }
 
     .our-identity-vision {
         padding: 100px 200px 50px 200px;
+        background-color: green;
 
+        .section-intro{
+            width: 50%;
+            background-color: orange;
+
+            .section-title{
+                text-align: left;
+            }
+
+            .section-image{
+                
+            }
+        }
 
         .section-text {
             display: flex;
             flex-direction: column;
             gap: 32px;
+            width: 50%;
 
             .paragraph {
                 display: flex;
@@ -39,9 +58,6 @@
                     line-height: 20px;
                 }
             }
-
-
-
 
         }
     }
