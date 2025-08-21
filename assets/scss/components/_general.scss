@@ -75,12 +75,12 @@
     border-radius: 6px;
 }
 
-.section-image{
-    
-}
-
 .section-header {
     gap: 16px;
+
+    .section-title{
+        text-align: left;
+    }
 }
 
 .section-gapped {

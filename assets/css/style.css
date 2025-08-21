@@ -5,16 +5,20 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+body .container {
+  padding: 0;
+}
 
 .topbar {
   gap: 24px;
   background: #272729;
   padding: 8px 50px;
 }
-.topbar div {
+.topbar a {
   gap: 12px;
+  text-decoration: none;
 }
-.topbar div span {
+.topbar a span {
   color: var(--Neutral-colors-White, #FFF);
   font-size: 12px;
   font-weight: 400;
@@ -203,6 +207,8 @@ footer .footer-bottom div a {
   padding: 0 16px;
   border-left: 1.5px solid var(--Brand-color-Brand-color, #C90200);
   gap: 16px;
+  display: flex;
+  flex-direction: column;
 }
 .left-bordered-card .card-header {
   gap: 16px;
@@ -303,6 +309,9 @@ footer .footer-bottom div a {
 
 .section-header {
   gap: 16px;
+}
+.section-header .section-title {
+  text-align: left;
 }
 
 .section-gapped {
@@ -445,13 +454,25 @@ footer .footer-bottom div a {
   background: var(--Neutral-colors-Light-Gray, #F8F9FA);
 }
 .values-and-sustainability-container .values-and-sustainability .section-intro {
+  width: 50%;
   padding: 100px 50px 100px 200px;
+}
+.values-and-sustainability-container .values-and-sustainability .section-image {
+  width: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .values-and-sustainability-container .sustainabilty-practise {
   padding: 100px 200px 50px 200px;
 }
+.values-and-sustainability-container .sustainabilty-practise .section-intro {
+  width: 50%;
+}
+.values-and-sustainability-container .sustainabilty-practise .section-intro .section-title {
+  text-align: left;
+}
 .values-and-sustainability-container .sustainabilty-practise .section-text {
-  width: 70%;
+  width: 50%;
 }
 .values-and-sustainability-container .sustainabilty-practise .section-text p {
   color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
@@ -462,10 +483,16 @@ footer .footer-bottom div a {
 }
 .values-and-sustainability-container .core-values {
   padding: 50px 200px 100px;
-  background-color: green;
+}
+.values-and-sustainability-container .core-values .section-header .section-title {
+  text-align: left;
+}
+.values-and-sustainability-container .core-values .text-content {
+  width: 50%;
 }
 .values-and-sustainability-container .core-values .left-bordered-cards {
   gap: 32px;
+  width: 50%;
 }
 
 .who-we-are-container .who-we-are {
@@ -482,11 +509,9 @@ footer .footer-bottom div a {
 }
 .who-we-are-container .our-identity-vision {
   padding: 100px 200px 50px 200px;
-  background-color: green;
 }
 .who-we-are-container .our-identity-vision .section-intro {
   width: 50%;
-  background-color: orange;
 }
 .who-we-are-container .our-identity-vision .section-intro .section-title {
   text-align: left;
@@ -529,6 +554,108 @@ footer .footer-bottom div a {
 }
 .who-we-are-container .our-team .section-body .text-content {
   color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.ethics-and-governence-container .ethics-and-governence {
+  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+}
+.ethics-and-governence-container .ethics-and-governence .section-intro {
+  width: 50%;
+  padding: 100px 50px 100px 200px;
+}
+.ethics-and-governence-container .ethics-and-governence .section-image {
+  width: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.ethics-and-governence-container .foundation-of-every-decision {
+  padding: 100px 200px 50px 200px;
+}
+.ethics-and-governence-container .foundation-of-every-decision .section-intro {
+  width: 50%;
+}
+.ethics-and-governence-container .foundation-of-every-decision .section-intro .section-title {
+  text-align: left;
+}
+.ethics-and-governence-container .foundation-of-every-decision .section-text {
+  width: 50%;
+}
+.ethics-and-governence-container .foundation-of-every-decision .section-text p {
+  color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.ethics-and-governence-container .core-values {
+  padding: 50px 200px 100px;
+}
+.ethics-and-governence-container .core-values .section-body .left-bordered-cards {
+  gap: 24px;
+  width: 50%;
+}
+.ethics-and-governence-container .core-values .section-body .section-image {
+  width: 50%;
+}
+
+.our-purpose-container .our-purpose {
+  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+}
+.our-purpose-container .our-purpose .section-intro {
+  width: 50%;
+  padding: 100px 50px 100px 200px;
+}
+.our-purpose-container .our-purpose .section-image {
+  width: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.our-purpose-container .renewable-energy {
+  padding: 100px 200px 50px 200px;
+}
+.our-purpose-container .renewable-energy .section-intro {
+  width: 50%;
+}
+.our-purpose-container .renewable-energy .section-intro .section-title {
+  text-align: left;
+}
+.our-purpose-container .renewable-energy .section-text {
+  width: 50%;
+}
+.our-purpose-container .renewable-energy .section-text p {
+  color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.our-purpose-container .power-change {
+  padding: 50px 200px 100px 200px;
+}
+.our-purpose-container .power-change .section-body .power-change-cards {
+  gap: 50px;
+}
+.our-purpose-container .power-change .section-body .power-change-cards .card {
+  gap: 32px;
+  padding: 24px;
+  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+}
+.our-purpose-container .power-change .section-body .power-change-cards .card .card-body {
+  gap: 10px;
+}
+.our-purpose-container .power-change .section-body .power-change-cards .card .card-body .card-title {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+.our-purpose-container .power-change .section-body .power-change-cards .card .card-body .card-description {
+  color: var(--Neutral-colors-Black, #010203);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
