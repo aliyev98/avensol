@@ -8,11 +8,14 @@ body {
 body .container {
   padding: 0;
 }
+body .card-header {
+  border-bottom: none !important;
+}
 
 .topbar {
   gap: 24px;
   background: #272729;
-  padding: 8px 50px;
+  padding: 8px 50px !important;
 }
 .topbar a {
   gap: 12px;
@@ -103,7 +106,7 @@ header .header-actions .btn-group .select-language {
 footer {
   background: var(--Neutral-colors-Light-Gray, #F8F9FA);
   position: relative;
-  padding: 32px 100px;
+  padding: 32px 100px !important;
   gap: 40px;
   overflow: hidden;
 }
@@ -148,7 +151,7 @@ footer .footer-bottom div a {
 }
 
 .bottom-bar {
-  padding: 16px 200px;
+  padding: 16px 200px !important;
   background: #272729;
 }
 .bottom-bar div {
@@ -226,6 +229,53 @@ footer .footer-bottom div a {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+}
+
+.page-intro-card {
+  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+}
+.page-intro-card .card-intro {
+  width: 50%;
+  padding: 100px 50px 100px 200px;
+}
+.page-intro-card .section-image {
+  width: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.catalogue-card {
+  gap: 12px;
+}
+.catalogue-card .card-img {
+  height: 200px;
+}
+.catalogue-card .card-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.catalogue-card .card-body .card-date {
+  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.catalogue-card .card-body .card-title {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 24px;
+}
+.catalogue-card .card-body .download-pdf {
+  gap: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .line {
@@ -323,6 +373,11 @@ footer .footer-bottom div a {
 }
 .section-intro .section-img {
   margin-top: 16px;
+}
+
+.card-header {
+  background-color: transparent;
+  border: none;
 }
 
 .homepage-container .hero-section {
@@ -450,18 +505,6 @@ footer .footer-bottom div a {
   gap: 10px;
 }
 
-.values-and-sustainability-container .values-and-sustainability {
-  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
-}
-.values-and-sustainability-container .values-and-sustainability .section-intro {
-  width: 50%;
-  padding: 100px 50px 100px 200px;
-}
-.values-and-sustainability-container .values-and-sustainability .section-image {
-  width: 50%;
-  height: -moz-fit-content;
-  height: fit-content;
-}
 .values-and-sustainability-container .sustainabilty-practise {
   padding: 100px 200px 50px 200px;
 }
@@ -495,18 +538,6 @@ footer .footer-bottom div a {
   width: 50%;
 }
 
-.who-we-are-container .who-we-are {
-  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
-}
-.who-we-are-container .who-we-are .section-intro {
-  width: 50%;
-  padding: 100px 50px 100px 200px;
-}
-.who-we-are-container .who-we-are .section-image {
-  width: 50%;
-  height: -moz-fit-content;
-  height: fit-content;
-}
 .who-we-are-container .our-identity-vision {
   padding: 100px 200px 50px 200px;
 }
@@ -560,18 +591,6 @@ footer .footer-bottom div a {
   line-height: 20px;
 }
 
-.ethics-and-governence-container .ethics-and-governence {
-  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
-}
-.ethics-and-governence-container .ethics-and-governence .section-intro {
-  width: 50%;
-  padding: 100px 50px 100px 200px;
-}
-.ethics-and-governence-container .ethics-and-governence .section-image {
-  width: 50%;
-  height: -moz-fit-content;
-  height: fit-content;
-}
 .ethics-and-governence-container .foundation-of-every-decision {
   padding: 100px 200px 50px 200px;
 }
@@ -602,18 +621,6 @@ footer .footer-bottom div a {
   width: 50%;
 }
 
-.our-purpose-container .our-purpose {
-  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
-}
-.our-purpose-container .our-purpose .section-intro {
-  width: 50%;
-  padding: 100px 50px 100px 200px;
-}
-.our-purpose-container .our-purpose .section-image {
-  width: 50%;
-  height: -moz-fit-content;
-  height: fit-content;
-}
 .our-purpose-container .renewable-energy {
   padding: 100px 200px 50px 200px;
 }
@@ -637,6 +644,8 @@ footer .footer-bottom div a {
   padding: 50px 200px 100px 200px;
 }
 .our-purpose-container .power-change .section-body .power-change-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 50px;
 }
 .our-purpose-container .power-change .section-body .power-change-cards .card {
@@ -660,4 +669,31 @@ footer .footer-bottom div a {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+}
+
+.principles-container .core-principles {
+  padding: 100px 200px;
+}
+.principles-container .core-principles .section-body .left-side {
+  width: 50%;
+}
+.principles-container .core-principles .section-body .left-side p {
+  color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.principles-container .core-principles .section-body .left-bordered-cards {
+  gap: 24px;
+  width: 50%;
+}
+
+.catalogues-container .catalogue-cards {
+  padding: 100px 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 50px;
 }/*# sourceMappingURL=style.css.map */

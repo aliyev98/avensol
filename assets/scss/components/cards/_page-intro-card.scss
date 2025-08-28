@@ -1,0 +1,13 @@
+.page-intro-card {
+    background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+
+    .card-intro {
+        width: 50%;
+        padding: 100px 50px 100px 200px;
+    }
+
+    .section-image {
+        width: 50%;
+        height: fit-content;
+    }
+}

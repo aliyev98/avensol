@@ -12,6 +12,8 @@
 
 @use './components/cards/features-card';
 @use './components/cards/leftBorderedCard';
+@use './components/cards/page-intro-card';
+@use './components/cards/catalogue-card';
 
 //components
 @use './components/general';
@@ -22,7 +24,8 @@
 @use './pages/who-we-are';
 @use './pages//ethics-and-governence';
 @use './pages/our-purpose';
-
+@use './pages/principles';
+@use './pages/catalogues';
 
 
 

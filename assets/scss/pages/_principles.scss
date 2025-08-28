@@ -1,0 +1,25 @@
+.principles-container {
+
+    .core-principles {
+        padding: 100px 200px;
+
+        .section-body {
+
+            .left-side {
+                width: 50%;
+                p {
+                    color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+            }
+
+            .left-bordered-cards{
+                gap: 24px;
+                width: 50%;
+            }
+        }
+    }
+}
