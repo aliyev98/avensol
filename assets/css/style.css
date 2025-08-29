@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: 0;
@@ -5,8 +6,8 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body .container {
-  padding: 0;
+body .container-fluid {
+  padding: 0 !important;
 }
 body .card-header {
   border-bottom: none !important;
@@ -276,6 +277,94 @@ footer .footer-bottom div a {
   gap: 10px;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.pagination-bar {
+  background-color: transparent;
+  border-top: 1px solid var(--Neutral-colors-Gray, #E9E9E9) !important;
+  padding-top: 24px;
+  margin-top: 50px;
+}
+.pagination-bar ul {
+  background-color: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+.pagination-bar ul .page-item {
+  background-color: transparent !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.pagination-bar ul .page-item a {
+  background-color: transparent;
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--Neutral-colors-Gray, #E9E9E9);
+  background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination-bar ul .page-item:first-child {
+  border: none !important;
+}
+.pagination-bar ul .page-item:first-child a {
+  border: none;
+  background-color: transparent !important;
+}
+.pagination-bar ul .page-item:last-child {
+  border: none !important;
+}
+.pagination-bar ul .page-item:last-child a {
+  border: none;
+  background-color: transparent !important;
+}
+.pagination-bar ul .active a {
+  background-color: #efefef;
+}
+
+.news-card .news-card-img {
+  height: 261px;
+  margin-bottom: 12px;
+  background: url(<path-to-image>) lightgray 50%/cover no-repeat, #D9D9D9;
+}
+.news-card .news-card-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.news-card .news-date {
+  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.news-card .read-more {
+  background-color: transparent;
+  border: none;
+  gap: 10px;
+  padding: 12px 0;
+  text-decoration: none;
+}
+.news-card .read-more span {
+  color: var(--Brand-color-Brand-color, #C90200);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .line {
@@ -689,11 +778,139 @@ footer .footer-bottom div a {
   width: 50%;
 }
 
-.catalogues-container .catalogue-cards {
+.catalogues-container .catalogue-cards-container {
   padding: 100px 200px;
+}
+.catalogues-container .catalogue-cards-container .catalogue-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   -moz-column-gap: 24px;
        column-gap: 24px;
   row-gap: 50px;
+}
+
+.gallery-container {
+  /* Masonry kolonları */
+  /* md */
+  /* xl */
+  /* Başlıklı kart (sağ üstteki gibi overlay) */
+}
+.gallery-container .gallery {
+  -moz-column-count: 2;
+       column-count: 2;
+  /* xs */
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  /* kolon aralığı */
+}
+@media (min-width: 768px) {
+  .gallery-container .gallery {
+    -moz-column-count: 3;
+         column-count: 3;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery-container .gallery {
+    -moz-column-count: 4;
+         column-count: 4;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+  }
+}
+.gallery-container .gallery__item {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  /* taşmayı engelle, aynı kolonda kalsın */
+  margin-bottom: 16px;
+  /* satır aralığı etkisi */
+  position: relative;
+  display: block;
+}
+.gallery-container .gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+.gallery-container .gallery__item--caption .gallery__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 80%);
+  border-radius: 0 0 6px 6px;
+}
+
+.news-page-container .news-section {
+  padding: 100px 200px;
+}
+.news-page-container .news-section .news-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 50px;
+}
+
+.news-details-page-container .news-header {
+  padding: 100px 200px 50px 200px;
+  gap: 16px;
+}
+.news-details-page-container .news-header .news-date {
+  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.news-details-page-container .news-header .news-title {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+.news-details-page-container .news-header .news-desription {
+  color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.5));
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.news-details-page-container .news-image {
+  padding: 0 200px;
+  height: 260px;
+}
+.news-details-page-container .news-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.news-details-page-container .news-details {
+  padding: 50px 200px;
+  gap: 32px;
+}
+.news-details-page-container .news-details .paragraph {
+  gap: 16px;
+}
+.news-details-page-container .news-details .paragraph-title {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+.news-details-page-container .news-details .paragraph-content {
+  color: var(--Neutral-colors-Black, #010203);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,17 +1,26 @@
-.catalogues-container{
+.catalogues-container {
 
-
-    .catalogue-cards{
-
+    .catalogue-cards-container {
         padding: 100px 200px;
 
-        display: grid;
 
-        grid-template-columns: repeat(3, 1fr);
+        .catalogue-cards {
 
-        column-gap: 24px;
-        row-gap: 50px;
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            column-gap: 24px;
+            row-gap: 50px;
+
+
+        }
 
     }
+
+
+
+
+
 
 }

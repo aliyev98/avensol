@@ -28,12 +28,35 @@ document.addEventListener('DOMContentLoaded', function () {
         sectionTop.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
+    function icon(name) {
+        if (name === 'left') {
+            return `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+  <path d="M5 12.7395L19 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 7.7395L5 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 17.7395L5 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+        }
+        // right
+        return `
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+  <path d="M19 12.7395H5" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 17.7395L19 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 7.7395L19 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> `;
+    }
 
     function drawPagination() {
         ul.innerHTML = '';
 
-        // Prev
-        ul.appendChild(makeItem('Prev', current > 1, () => showPage(current - 1)));
+        // BACK (sol ok + Back)
+        ul.appendChild(
+            makeItem({
+                html: `${icon('left')} <span>Back</span>`,
+                enabled: current > 1,
+                onClick: () => showPage(current - 1),
+            })
+        );
 
         // Sayfa numaraları
         for (let i = 1; i <= totalPages; i++) {
@@ -48,17 +71,23 @@ document.addEventListener('DOMContentLoaded', function () {
             ul.appendChild(li);
         }
 
-        // Next
-        ul.appendChild(makeItem('Next', current < totalPages, () => showPage(current + 1)));
+        // NEXT (Next + sağ ok)
+        ul.appendChild(
+            makeItem({
+                html: `<span>Next</span> ${icon('right')} `,
+                enabled: current < totalPages,
+                onClick: () => showPage(current + 1),
+            })
+        );
     }
 
-    function makeItem(label, enabled, onClick) {
+    function makeItem({ html, enabled, onClick }) {
         const li = document.createElement('li');
         li.className = 'page-item' + (enabled ? '' : ' disabled');
         const a = document.createElement('a');
-        a.className = 'page-link';
+        a.className = 'page-link d-inline-flex align-items-center gap-2';
         a.href = '#';
-        a.textContent = label;
+        a.innerHTML = html; // ← metin + ikon buradan geliyor
         if (enabled) {
             a.addEventListener('click', (e) => { e.preventDefault(); onClick(); });
         }

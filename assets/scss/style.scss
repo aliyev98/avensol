@@ -14,6 +14,8 @@
 @use './components/cards/leftBorderedCard';
 @use './components/cards/page-intro-card';
 @use './components/cards/catalogue-card';
+@use './components/cards/pagination-bar';
+@use './components/cards/news-card';
 
 //components
 @use './components/general';
@@ -26,6 +28,9 @@
 @use './pages/our-purpose';
 @use './pages/principles';
 @use './pages/catalogues';
+@use './pages/gallery';
+@use './pages/news';
+@use './pages/news-details';
 
 
 
