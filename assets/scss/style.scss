@@ -16,6 +16,8 @@
 @use './components/cards/catalogue-card';
 @use './components/cards/pagination-bar';
 @use './components/cards/news-card';
+@use './components/cards/image-text-card';
+@use './components/cards/text-image-card';
 
 //components
 @use './components/general';
@@ -31,8 +33,11 @@
 @use './pages/gallery';
 @use './pages/news';
 @use './pages/news-details';
-
-
+@use './pages/social-media';
+@use './pages/solar';
+@use './pages/wind';
+@use './pages/hydro';
+@use './pages/transmissionNetworks';
 
 
 @use './pages/test';

@@ -1,0 +1,27 @@
+.text-image-card {
+    gap: 50px;
+
+    .section-intro {
+        gap: 32px;
+        width: 50%;
+        position: relative;
+
+        .section-title {
+            text-align: left;
+        }
+
+        .corner-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .section-image {
+        width: 50%;
+        height: 428px;
+        overflow: hidden;
+    }
+
+
+}

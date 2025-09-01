@@ -68,4 +68,27 @@
         }
     }
 
+    .most-recent-news {
+        padding: 50px 200px;
+
+        gap: 32px;
+
+        &-header {
+
+            .title {
+                color: #1D1C1C;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+            }
+
+        }
+
+        .news {
+            display: flex;
+            gap: 24px;
+        }
+    }
+
 }
