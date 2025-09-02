@@ -1,0 +1,30 @@
+.contact-us-page-container {
+
+    .contact-us-form-container {
+        padding: 100px 200px;
+
+        .form-header {
+
+            span {
+                &:first-child {
+                    color: #1D1C1C;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                }
+
+                &:last-child {
+                    color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+            }
+
+
+        }
+    }
+
+}

@@ -9,7 +9,6 @@
 @use './layout/bottombar';
 
 //cards
-
 @use './components/cards/features-card';
 @use './components/cards/leftBorderedCard';
 @use './components/cards/page-intro-card';
@@ -21,6 +20,8 @@
 
 //components
 @use './components/general';
+@use './components/input-with-label';
+@use './components/textarea-with-label';
 
 //pages
 @use './pages/index';
@@ -38,6 +39,9 @@
 @use './pages/wind';
 @use './pages/hydro';
 @use './pages/transmissionNetworks';
+@use './pages/energy-storage-systems';
+@use './pages/data-centers';
+@use './pages/contact-us';
 
 
 @use './pages/test';

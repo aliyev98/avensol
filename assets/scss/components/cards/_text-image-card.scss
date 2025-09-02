@@ -2,18 +2,20 @@
     gap: 50px;
 
     .section-intro {
-        gap: 32px;
         width: 50%;
-        position: relative;
 
-        .section-title {
-            text-align: left;
-        }
+        .intro-header {
+            gap: 32px;
 
-        .corner-icon {
-            position: absolute;
-            top: 0;
-            right: 0;
+            div {
+                .section-title {
+                    text-align: left;
+                }
+
+                .corner-icon {
+                    height: fit-content;
+                }
+            }
         }
     }
 

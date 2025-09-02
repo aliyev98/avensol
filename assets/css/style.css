@@ -13,7 +13,7 @@ body .card-header {
 .topbar {
   gap: 24px;
   background: #272729;
-  padding: 8px 50px !important;
+  padding: 8px 200px !important;
 }
 .topbar a {
   gap: 12px;
@@ -240,7 +240,7 @@ footer .footer-bottom div a {
   width: 50%;
   height: -moz-fit-content;
   height: fit-content;
-  max-height: 690px;
+  max-height: 500px;
   overflow: hidden;
 }
 
@@ -414,17 +414,17 @@ footer .footer-bottom div a {
   gap: 50px;
 }
 .text-image-card .section-intro {
-  gap: 32px;
   width: 50%;
-  position: relative;
 }
-.text-image-card .section-intro .section-title {
+.text-image-card .section-intro .intro-header {
+  gap: 32px;
+}
+.text-image-card .section-intro .intro-header div .section-title {
   text-align: left;
 }
-.text-image-card .section-intro .corner-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
+.text-image-card .section-intro .intro-header div .corner-icon {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .text-image-card .section-image {
   width: 50%;
@@ -507,7 +507,7 @@ footer .footer-bottom div a {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 6px;
 }
 
@@ -1039,4 +1039,52 @@ footer .footer-bottom div a {
 }
 .transmission-networks-page-container .feature-cards-section .feature-cards {
   gap: 16px;
+}
+
+.energy-storage-page-container .left-bordered-cards {
+  padding: 100px 200px 50px 200px;
+  gap: 32px;
+}
+.energy-storage-page-container .text-image-card {
+  padding: 50px 200px;
+}
+.energy-storage-page-container .feature-cards-section {
+  gap: 32px;
+  padding: 50px 200px 100px 200px;
+}
+.energy-storage-page-container .feature-cards-section .feature-cards {
+  gap: 16px;
+}
+
+.data-centers-page-container .left-bordered-cards {
+  padding: 100px 200px 50px 200px;
+  gap: 32px;
+}
+.data-centers-page-container .text-image-card {
+  padding: 50px 200px;
+}
+.data-centers-page-container .feature-cards-section {
+  gap: 32px;
+  padding: 50px 200px 100px 200px;
+}
+.data-centers-page-container .feature-cards-section .feature-cards {
+  gap: 16px;
+}
+
+.contact-us-page-container .contact-us-form-container {
+  padding: 100px 200px;
+}
+.contact-us-page-container .contact-us-form-container .form-header span:first-child {
+  color: #1D1C1C;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+.contact-us-page-container .contact-us-form-container .form-header span:last-child {
+  color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }/*# sourceMappingURL=style.css.map */
