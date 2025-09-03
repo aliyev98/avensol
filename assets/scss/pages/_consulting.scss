@@ -1,0 +1,37 @@
+.consulting-page-container {
+
+    .epc-guiding {
+        padding: 50px 200px 100px 200px;
+
+        .icon-text-cards {
+            gap: 16px;
+        }
+    }
+
+    .epc-services {
+        padding: 50px 200px 100px 200px;
+    }
+
+    .clean-energy {
+        padding: 0px 200px 50px 200px;
+
+        .section-intro {
+            .section-title {
+                text-align: left;
+            }
+        }
+    }
+
+    .feature-cards-section {
+        gap: 32px;
+        padding: 50px 200px 100px 200px;
+
+        .section-title{
+            text-align: center;
+        }
+
+        .feature-cards {
+            gap: 16px;
+        }
+    }
+}

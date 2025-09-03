@@ -46,6 +46,8 @@
         gap: 32px;
 
         .paragraph {
+            display: flex;
+            flex-direction: column;
             gap: 16px;
 
             &-title {
@@ -66,6 +68,7 @@
 
 
         }
+
     }
 
     .most-recent-news {

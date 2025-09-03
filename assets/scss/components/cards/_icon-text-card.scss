@@ -1,0 +1,22 @@
+.icon-text-card {
+
+    display: flex;
+    gap: 16px;
+
+
+    p {
+        color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+
+        span {
+            color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+
+            font-style: normal;
+            font-weight: 700;
+        }
+    }
+
+}

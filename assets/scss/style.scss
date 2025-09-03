@@ -17,6 +17,8 @@
 @use './components/cards/news-card';
 @use './components/cards/image-text-card';
 @use './components/cards/text-image-card';
+@use './components/cards/icon-text-card';
+@use './components/cards/media-checklist-card';
 
 //components
 @use './components/general';
@@ -42,6 +44,12 @@
 @use './pages/energy-storage-systems';
 @use './pages/data-centers';
 @use './pages/contact-us';
+@use './pages/privacyPolicy';
+@use './pages/not-found';
+@use './pages/epc';
+@use './pages/project-management';
+@use './pages/procurement.scss';
+@use './pages/consulting';
 
 
 @use './pages/test';

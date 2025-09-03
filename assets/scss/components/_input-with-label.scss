@@ -1,3 +1,30 @@
-.input-with-label{
-    
+.input-with-label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+
+        span {
+            color: #C90200;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+        }
+    }
+
+    input {
+        padding: 14px 12px;
+        border-radius: 6px;
+        border: 1px solid var(--gray-white-gray-50, #D6D6D6);
+        background: var(--gray-white-white-2, #FFF);
+    }
+
+
 }

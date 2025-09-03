@@ -25,6 +25,110 @@
 
 
         }
+
+        .form-body {
+
+            .form-inputs {
+                width: 50%;
+                padding: 24px;
+                gap: 24px;
+                border-radius: 12px;
+                border: 1px solid #EDEDED;
+                background: #F8F8F8;
+
+                .form-title {
+                    color: #000;
+                    text-align: center;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%;
+                }
+
+                .input-pair {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 16px;
+                    align-self: stretch;
+
+                    .input-with-label {
+                        width: 50% !important;
+                    }
+                }
+
+                .send-message {
+                    width: fit-content;
+                }
+            }
+
+            .contact-infos {
+                width: 50%;
+                gap: 32px;
+
+                &-head {
+                    padding: 24px;
+                    gap: 24px;
+                    border-radius: 12px;
+                    border: 1px solid #EDEDED;
+                    background: #F8F8F8;
+
+                    .infos-title {
+                        color: #000;
+                        text-align: center;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                    }
+
+                    .infos {
+                        border-top: 1px solid #EBEBEB;
+                        padding-top: 16px;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 24px;
+
+                        .info-box {
+                            display: flex;
+                            gap: 12px;
+
+                            .info {
+                                span {
+                                    &:first-child {
+                                        color: #000;
+                                        font-size: 18px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        line-height: 22px;
+                                    }
+
+                                    &:last-child {
+                                        color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.50));
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: 22px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .map{
+                    width: 100%;
+                    height: 350px;
+
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+            }
+
+        }
     }
 
 }

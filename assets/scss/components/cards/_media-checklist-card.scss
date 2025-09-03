@@ -1,0 +1,43 @@
+.media-checklist-card {
+
+    
+
+    .section-card-side {
+
+        .container-header {
+            margin-bottom: 24px;
+        }
+
+        .checklist-cards {
+            gap: 16px;
+
+            .checklist-card {
+                gap: 16px;
+
+                .check-icon-div {
+                    padding: 5px;
+                    border-radius: 2px;
+                    border: 1px solid var(--Brand-color-Brand-color, #C90200);
+                    background: var(--Brand-color-Brand-color, #C90200);
+                }
+
+                p {
+                    color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+
+                    span {
+                        color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -25,9 +25,10 @@
     //     max-width: 546px !important;
     // }
 
-    a {
+    button {
         gap: 12px;
-        text-decoration: none;
+        background-color: transparent;
+        border: none;
 
         span {
             color: var(--Neutral-colors-White, #FFF);

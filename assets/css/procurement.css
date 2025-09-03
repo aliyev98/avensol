@@ -1,0 +1,25 @@
+.procurement-page-container .epc-guiding {
+  padding: 50px 200px 100px 200px;
+}
+.procurement-page-container .epc-guiding .icon-text-cards {
+  gap: 16px;
+}
+.procurement-page-container .epc-services {
+  padding: 50px 200px 100px 200px;
+}
+.procurement-page-container .clean-energy {
+  padding: 0px 200px 50px 200px;
+}
+.procurement-page-container .clean-energy .section-intro .section-title {
+  text-align: left;
+}
+.procurement-page-container .feature-cards-section {
+  gap: 32px;
+  padding: 50px 200px 100px 200px;
+}
+.procurement-page-container .feature-cards-section .section-title {
+  text-align: center;
+}
+.procurement-page-container .feature-cards-section .feature-cards {
+  gap: 16px;
+}/*# sourceMappingURL=procurement.css.map */

@@ -94,4 +94,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     showPage(1);
+
 });
