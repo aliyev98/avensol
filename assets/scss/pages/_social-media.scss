@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .social-media-page-container {
 
     .latest-linkedin-feeds {
@@ -30,7 +32,6 @@
         .feeds {
             display: flex;
             justify-content: space-between;
-            // gap: 24px;
 
             .feed {
                 display: flex;
@@ -40,7 +41,6 @@
                 scrollbar-width: none;
                 padding: 12px 16px;
                 gap: 10px;
-
                 border-radius: 8px;
                 border: 1px solid #E0DFDC;
                 background: #FFF;
@@ -55,6 +55,16 @@
             }
         }
 
+        @include mq(phone-only) {
+            padding: 72px 16px;
+
+            .feeds {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 24px;
+            }
+
+        }
 
     }
 

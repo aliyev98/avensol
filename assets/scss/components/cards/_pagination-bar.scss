@@ -1,64 +1,70 @@
-        .pagination-bar {
-            background-color: transparent;
-            border-top: 1px solid var(--Neutral-colors-Gray, #E9E9E9) !important;
-            padding-top: 24px;
-            margin-top: 50px;
+@use '../../abstracts/mixins' as *;
 
-            ul {
+.pagination-bar {
+    background-color: transparent;
+    border-top: 1px solid var(--Neutral-colors-Gray, #E9E9E9) !important;
+    padding-top: 24px;
+    margin-top: 50px;
+
+    ul {
+        background-color: transparent;
+        width: fit-content;
+        margin-left: auto;
+        display: flex;
+        gap: 8px;
+
+        @include mq(phone-only){
+            margin-right: auto;
+        }
+
+        .page-item {
+            background-color: transparent !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+
+            a {
                 background-color: transparent;
-                width: fit-content;
-                margin-left: auto;
+                color: var(--Neutral-colors-Black, #010203);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                border-radius: 8px;
+                border: 1px solid var(--Neutral-colors-Gray, #E9E9E9);
+                background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+                min-width: 40px;
                 display: flex;
-                gap: 8px;
+                align-items: center;
+                justify-content: center;
+            }
 
-                .page-item {
+            &:first-child {
+                border: none !important;
+
+                a {
+                    border: none;
                     background-color: transparent !important;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 8px;
-
-                    a {
-                        background-color: transparent;
-                        color: var(--Neutral-colors-Black, #010203);
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 20px;
-                        border-radius: 8px;
-                        border: 1px solid var(--Neutral-colors-Gray, #E9E9E9);
-                        background: var(--Neutral-colors-Light-Gray, #F8F9FA);
-                        min-width: 40px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    }
-
-                    &:first-child {
-                        border: none !important;
-
-                        a {
-                            border: none;
-                            background-color: transparent !important;
-                        }
-                    }
-
-                    &:last-child {
-                        border: none !important;
-
-
-                        a {
-                            border: none;
-                            background-color: transparent !important;
-                        }
-                    }
                 }
+            }
 
-                .active {
+            &:last-child {
+                border: none !important;
 
-                    a {
-                        background-color: #efefef;
-                    }
+
+                a {
+                    border: none;
+                    background-color: transparent !important;
                 }
             }
         }
+
+        .active {
+
+            a {
+                background-color: #efefef;
+            }
+        }
+    }
+}

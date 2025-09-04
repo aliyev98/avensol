@@ -1,88 +1,57 @@
+@use '../abstracts/mixins' as *;
+
 .gallery-container {
 
+  .gallery {
+    column-count: 2;
+    column-gap: 16px;
+  }
 
-    // .gallery-section {
-    //     padding: 50px 200px 32px 200px;
-    //     gap: 32px;
-
-    //     .section-header {
-    //         padding: 32px 0 !important;
-    //     }
-
-    //     .gallery {
-
-    //         .gallery-images {
-    //             display: grid;
-    //             gap: 16px;
-
-    //             .gallery-img {
-    //                 max-width: 300px;
-    //                 height: 290px;
-    //                 background: url(<path-to-image>) lightgray 50% / cover no-repeat, #D9D9D9;
-
-    //                 img {
-    //                     object-fit: cover;
-    //                     width: 100%;
-    //                     height: 100%;
-    //                 }
-    //             }
-
-    //         }
-    //     }
-    // }
-
-    /* Masonry kolonları */
+  @include mq(phone-only) {
     .gallery {
-        column-count: 2;
-        /* xs */
-        column-gap: 16px;
-        /* kolon aralığı */
+      column-count: 1;
+      column-gap: 12px;
     }
 
-    @media (min-width: 768px) {
-        .gallery {
-            column-count: 3;
-            column-gap: 20px;
-        }
+    .gallery__item { display: none; }
+    .gallery__item:nth-child(-n+10) { display: block; }
+  }
+
+  @media (min-width: 768px) {
+    .gallery {
+      column-count: 3;
+      column-gap: 20px;
     }
+  }
 
-    /* md */
-    @media (min-width: 1200px) {
-        .gallery {
-            column-count: 4;
-            column-gap: 24px;
-        }
+  @media (min-width: 1200px) {
+    .gallery {
+      column-count: 4;
+      column-gap: 24px;
     }
+  }
 
-    /* xl */
+  .gallery__item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    position: relative;
+    display: block;
+  }
 
-    .gallery__item {
-        break-inside: avoid;
-        /* taşmayı engelle, aynı kolonda kalsın */
-        margin-bottom: 16px;
-        /* satır aralığı etkisi */
-        position: relative;
-        display: block;
-    }
+  .gallery__item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
 
-    .gallery__item img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 6px;
-    }
-
-    /* Başlıklı kart (sağ üstteki gibi overlay) */
-    .gallery__item--caption .gallery__caption {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 10px 12px;
-        font-size: 14px;
-        color: #fff;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .55) 80%);
-        border-radius: 0 0 6px 6px;
-    }
-
+  .gallery__item--caption .gallery__caption {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 80%);
+    border-radius: 0 0 6px 6px;
+  }
 }

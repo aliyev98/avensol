@@ -1,3 +1,5 @@
+@use '../../abstracts/mixins' as *;
+
 .text-image-card {
     gap: 50px;
 
@@ -23,6 +25,19 @@
         width: 50%;
         height: 428px;
         overflow: hidden;
+    }
+
+    @include mq(phone-only){
+        gap: 32px;
+        flex-direction: column;
+
+        .section-intro{
+            width: 100%;
+        }
+
+        .section-image{
+            width: 100%;
+        }
     }
 
 

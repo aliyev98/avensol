@@ -1,8 +1,9 @@
+@use '../abstracts/mixins' as *;
+
 .catalogues-container {
 
     .catalogue-cards-container {
         padding: 100px 200px;
-
 
         .catalogue-cards {
 
@@ -16,11 +17,14 @@
 
         }
 
+        @include mq(phone-only) {
+            padding: 50px 16px;
+
+            .catalogue-cards{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
     }
-
-
-
-
-
 
 }
