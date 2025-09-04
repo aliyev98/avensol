@@ -1,20 +1,30 @@
+@use '../abstracts/mixins' as *;
+
 .energy-storage-page-container {
 
     .left-bordered-cards {
         padding: 100px 200px 50px 200px;
         gap: 32px;
+
+        @include mq(phone-only){
+            padding: 50px 16px;
+        }
     }
 
     .text-image-card {
         padding: 50px 200px;
+
+        @include mq(phone-only){
+            padding: 50px 16px;
+        }
     }
 
     .feature-cards-section{
         gap: 32px;
         padding: 50px 200px 100px 200px;
 
-        .feature-cards{
-            gap: 16px;
+        @include mq(phone-only){
+            padding: 50px 16px;
         }
     }
 }

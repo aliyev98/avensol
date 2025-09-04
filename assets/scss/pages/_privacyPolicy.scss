@@ -1,5 +1,6 @@
-.privacy-policy-page-container {
+@use '../abstracts/mixins' as *;
 
+.privacy-policy-page-container {
 
     .text-content {
         display: flex;
@@ -42,5 +43,10 @@
 
 
         }
+
+        @include mq(phone-only){
+            padding: 50px 16px;
+        }
     }
+
 }
