@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .principles-container {
 
     .core-principles {
@@ -7,6 +9,7 @@
 
             .left-side {
                 width: 50%;
+
                 p {
                     color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
                     font-size: 14px;
@@ -16,9 +19,35 @@
                 }
             }
 
-            .left-bordered-cards{
+            .left-bordered-cards {
                 gap: 24px;
                 width: 50%;
+            }
+        }
+
+        @include mq(phone-only) {
+            padding: 32px 16px;
+
+            .section-header{
+                .section-title{
+                    text-align: left;
+                }
+
+                .section-description{
+                    text-align: left;
+                }
+            }
+
+            .section-body {
+                flex-direction: column;
+
+                .left-side {
+                    width: 100%;
+                }
+
+                .left-bordered-cards {
+                    width: 100%;
+                }
             }
         }
     }

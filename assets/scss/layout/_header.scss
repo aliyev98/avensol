@@ -2,6 +2,26 @@
 
 header {
     padding: 8px 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include mq(phone-only) {
+        padding: 12px 24px;
+        justify-content: space-around;
+
+        nav {
+            display: none;
+        }
+
+        .header-actions {
+            display: none !important;
+        }
+
+        .canvas-btn {
+            display: block !important;
+        }
+    }
 
     .logo {
         width: 100px;
@@ -69,7 +89,7 @@ header {
     .header-actions {
         gap: 12px;
 
-        button{
+        button {
             font-size: 14px;
         }
 
@@ -84,6 +104,76 @@ header {
                 background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
             }
 
+        }
+    }
+
+    .canvas-btn {
+        display: none;
+        background-color: transparent;
+        border: none;
+    }
+
+    .offcanvas {
+
+        .header-actions{
+            display: flex !important;
+            margin-top: 70px;
+        }
+
+        &-header {
+            .btn-close {
+                margin-left: 0;
+            }
+        }
+
+        &-body {
+
+            #infoAccordion {
+                --bs-accordion-border-width: 0;
+                --bs-accordion-inner-border-radius: 0;
+                --bs-accordion-btn-focus-box-shadow: none;
+                --bs-accordion-active-bg: transparent;
+            }
+
+            .accordion {
+
+                &-item {
+
+                    .accordion-header {
+
+                        .accordion-button {
+                            padding: 16px 0;
+                            border-bottom: 1px solid var(--gray-white-gray-60, #EBEBEB);
+                            color: var(--Neutral-colors-Black, #010203);
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 24px;
+                        }
+                    }
+
+                    .collapse {
+
+                        .accordion-body {
+
+                            .list-group {
+                                &-item {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 16px;
+                                    color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
+                                    font-size: 18px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
         }
     }
 

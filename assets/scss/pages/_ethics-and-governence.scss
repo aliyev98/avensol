@@ -1,21 +1,51 @@
+@use '../abstracts/mixins' as *;
+
 .ethics-and-governence-container {
 
     .foundation-of-every-decision {
         padding: 100px 200px 50px 200px;
+
+        @include mq(phone-only) {
+            padding: 50px 16px;
+        }
     }
 
     .core-values {
         padding: 50px 200px 100px;
 
-        .section-body{
+        .section-body {
 
-            .left-bordered-cards{
+            .left-bordered-cards {
                 gap: 24px;
                 width: 50%;
             }
 
-            .section-image{
+            .section-image {
                 width: 50%;
+            }
+
+        }
+
+        @include mq(phone-only) {
+            padding: 50px 16px 100px 16px;
+
+            .section-header{
+                .section-title{
+                    text-align: left;
+                }
+            }
+
+            .section-body {
+                flex-direction: column;
+
+                .section-image {
+                    width: 100%;
+                }
+
+                .left-bordered-cards {
+                    gap: 24px;
+                    width: 100%;
+                }
             }
 
         }

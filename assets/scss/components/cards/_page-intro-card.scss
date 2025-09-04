@@ -1,9 +1,12 @@
+@use '../../abstracts/mixins' as *;
+
 .page-intro-card {
     background: var(--Neutral-colors-Light-Gray, #F8F9FA);
 
     .card-intro {
         width: 50%;
         padding: 100px 50px 100px 200px;
+        gap: 16px;
     }
 
     .section-image {
@@ -11,5 +14,27 @@
         height: fit-content;
         max-height: 500px;
         overflow: hidden;
+    }
+
+    @include mq(phone-only) {
+        flex-direction: column;
+
+        .section-image {
+            width: 100%;
+            order: -1;
+        }
+
+        .card-intro {
+            width: 100%;
+            padding: 40px 16px;
+
+            .section-title {
+                text-align: left;
+            }
+
+            .section-description {
+                text-align: left;
+            }
+        }
     }
 }

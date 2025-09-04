@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- header -->
+    <select id="langSwitcher" aria-label="Language">
+        <option value="tr">Türkçe</option>
+        <option value="en">English</option>
+        <option value="az">Azərbaycanca</option>
+    </select>
+
+    <h2 data-i18n="epc.title"></h2>
+
+    <p data-i18n="epc.intro"></p>
+
+    <button data-i18n="cta.primary"
+        data-i18n-title="cta.primaryTitle"
+        ></button>
+
+    <input type="text" data-i18n-placeholder="search.placeholder"
+    />
+
+    <script src="/js/i18n.js" defer></script>
+
+
+</body>
+
+</html>

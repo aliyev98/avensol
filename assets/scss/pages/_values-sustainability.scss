@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .values-and-sustainability-container {
 
     .sustainabilty-practise {
@@ -21,6 +23,32 @@
         .left-bordered-cards {
             gap: 32px;
             width: 50%;
+        }
+    }
+
+    @include mq(phone-only){
+
+        .sustainabilty-practise{
+            padding: 50px 16px;
+        }
+
+        .core-values{
+            padding: 50px 16px;
+
+            .section-header{
+            }
+
+            .section-body{
+                flex-direction: column;
+            }
+
+            .text-content{
+                width: 100% !important;
+            }
+
+            .left-bordered-cards{
+                width: 100%;
+            }
         }
     }
 }

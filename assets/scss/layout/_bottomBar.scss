@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .bottom-bar {
     padding: 16px 200px !important;
     background: #272729;
@@ -25,6 +27,16 @@
             background: var(--Neutral-colors-White-15, rgba(255, 255, 255, 0.15));
             cursor: pointer;
             z-index: 9;
+        }
+    }
+
+    @include mq(phone-only){
+        flex-direction: column;
+        padding: 16px !important;
+        gap: 16px;
+
+        .privacy-and-policy{
+            order: -1;
         }
     }
 

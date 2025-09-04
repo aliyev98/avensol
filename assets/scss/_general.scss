@@ -1,6 +1,8 @@
-.line {
-    height: 1px;
-    background: var(--Neutral-colors-Gray, #E9E9E9);
+@use './abstracts/mixins' as *;
+
+
+.section-header {
+    gap: 16px;
 }
 
 .section-name {
@@ -17,7 +19,39 @@
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
-    text-align: center;
+
+    @include mq(phone-only) {
+        text-align: center;
+    }
+}
+
+.section-description {
+    color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.50));
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+    @include mq(phone-only) {
+        text-align: center;
+    }
+}
+
+.section-intro {
+    gap: 16px;
+
+    .section-img {
+        margin-top: 16px;
+    }
+}
+
+.section-gapped {
+    gap: 50px;
+}
+
+.line {
+    height: 1px;
+    background: var(--Neutral-colors-Gray, #E9E9E9);
 }
 
 .section-info {
@@ -37,30 +71,6 @@
     line-height: 140%;
 }
 
-.section-description {
-    color: var(--Neutral-colors-Black-50, rgba(1, 2, 3, 0.50));
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-}
-
-.w-40 {
-    width: 40%;
-}
-
-.w-45 {
-    width: 45%;
-}
-
-.p-50-200 {
-    padding: 50px 200px;
-}
-
-.p-50-100 {
-    padding: 50px 100px;
-}
-
 .icon-bg {
     padding: 8px;
     border-radius: 6px;
@@ -77,25 +87,11 @@
     border-radius: 6px;
 }
 
-.section-header {
-    gap: 16px;
 
-    .section-title {
-        text-align: left;
-    }
-}
 
-.section-gapped {
-    gap: 50px;
-}
 
-.section-intro {
-    gap: 16px;
 
-    .section-img {
-        margin-top: 16px;
-    }
-}
+
 
 .card-header {
     background-color: transparent;

@@ -1,7 +1,13 @@
+@use '../abstracts/mixins' as *;
+
 .our-purpose-container {
 
     .renewable-energy {
         padding: 100px 200px 50px 200px;
+
+        @include mq(phone-only){
+            padding: 50px 16px;
+        }
     }
 
     .power-change {
@@ -11,7 +17,6 @@
         .section-body {
 
             .power-change-cards {
-
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 50px;
@@ -42,6 +47,24 @@
                             line-height: 20px;
                         }
                     }
+                }
+            }
+        }
+
+        @include mq(phone-only){
+            padding: 50px 16px 100px 16px;
+
+            .section-header{
+
+                .section-title{
+                    text-align: left;
+                }
+            }
+
+            .section-body{
+                .power-change-cards{
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 16px;
                 }
             }
         }

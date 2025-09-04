@@ -8,8 +8,12 @@
 @use './layout/footer';
 @use './layout/bottombar';
 
+// general
+@use './general';
+
 //cards
 @use './components/cards/features-card';
+@use './components/cards/icon-heading-card';
 @use './components/cards/leftBorderedCard';
 @use './components/cards/page-intro-card';
 @use './components/cards/catalogue-card';
@@ -21,7 +25,6 @@
 @use './components/cards/media-checklist-card';
 
 //components
-@use './components/general';
 @use './components/input-with-label';
 @use './components/textarea-with-label';
 
@@ -50,6 +53,3 @@
 @use './pages/project-management';
 @use './pages/procurement.scss';
 @use './pages/consulting';
-
-
-@use './pages/test';

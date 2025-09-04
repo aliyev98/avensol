@@ -15,14 +15,14 @@
 
         <!-- topbar -->
 
-        <div class="topbar d-flex align-items-center justify-content-end">
+        <div class="topbar">
 
-            <button href="#" class="d-flex align-items-center">
+            <button class="d-flex align-items-center">
                 <img src="assets/icons/topbar-phone.svg" alt="">
                 <span>+994 55 555 33 22</span>
             </button>
 
-            <button href="#" class="d-flex align-items-center">
+            <button class="d-flex align-items-center">
                 <img src="assets/icons/topbar-email.svg" alt="">
                 <span>avensol@info.com</span>
             </button>
@@ -31,13 +31,14 @@
 
         <!-- header -->
 
-        <header class="d-flex justify-content-around align-items-center">
+        <header>
 
             <a href="/" class="logo">
                 <img src="assets/images/logo-png.png" alt="">
             </a>
 
             <nav>
+
                 <ul class="nav nav-tabs">
 
                     <!-- about us -->
@@ -175,12 +176,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="notFound.html">
-                                    Electricity Trading
-                                    <img src="assets/icons/dropdown-icon-right.svg" alt="">
-                                </a>
-                            </li>
-                            <li>
                                 <a class="dropdown-item" href="operatingAndMaintance.html">
                                     Operation & Maintenance
                                     <img src="assets/icons/dropdown-icon-right.svg" alt="">
@@ -229,7 +224,6 @@
 
                 </ul>
 
-
             </nav>
 
             <div class="header-actions d-flex align-items-center">
@@ -243,8 +237,8 @@
                     </button>
 
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Azerbaijan</a></li>
-                        <li><a class="dropdown-item" href="#">Russian</a></li>
+                        <li><a class="dropdown-item" href="#">AZE</a></li>
+                        <li><a class="dropdown-item" href="#"></a></li>
                     </ul>
 
                 </div>
@@ -253,7 +247,373 @@
 
             </div>
 
+            <!-- for mobile -->
+            <button class="canvas-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"><img src="assets/images/canvas-icon.svg" alt="">
+            </button>
 
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+
+                    <div class="accordion" id="infoAccordion">
+                        <!-- About Us -->
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header" id="headingAbout">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAbout" aria-expanded="true" aria-controls="collapseAbout">
+                                    About Us
+                                </button>
+                            </h2>
+
+                            <div id="collapseAbout" class="accordion-collapse collapse show"
+                                aria-labelledby="headingAbout" data-bs-parent="#infoAccordion">
+
+                                <div class="accordion-body p-0">
+                                    <div class="list-group list-group-flush">
+                                        <a href="whoWeAre.html" class="list-group-item list-group-item-action">
+                                            Who We Are
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="principles.html" class="list-group-item list-group-item-action">
+                                            Principles
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="ourPurpose.html" class="list-group-item list-group-item-action">
+                                            Our Purpose
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="valuesSustainability.html" class="list-group-item list-group-item-action">
+                                            Values&Sustainability
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="ethicsAndGovernence.html" class="list-group-item list-group-item-action">
+                                            Ethics&Governance
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Where We Do -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingWhere">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseWhere" aria-expanded="false" aria-controls="collapseWhere">
+                                    Where We Do
+                                </button>
+                            </h2>
+                            <div id="collapseWhere" class="accordion-collapse collapse" aria-labelledby="headingWhere"
+                                data-bs-parent="#infoAccordion">
+                                <div class="accordion-body p-0">
+                                    <div class="list-group list-group-flush">
+                                        <a href="solar.html" class="list-group-item list-group-item-action">
+                                            Solar
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="wind.html" class="list-group-item list-group-item-action">
+                                            Wind
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="hydro.html" class="list-group-item list-group-item-action">
+                                            Hydro
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="transmissionNetworks.html" class="list-group-item list-group-item-action">
+                                            Transmission Networks
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="energyStorageSystems.html" class="list-group-item list-group-item-action">
+                                            Energy Storage Systems
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="dataCenters.html" class="list-group-item list-group-item-action">
+                                            Data Centers
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- What We Do -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingWhat">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseWhat" aria-expanded="false" aria-controls="collapseWhat">
+                                    What We Do
+                                </button>
+                            </h2>
+                            <div id="collapseWhat" class="accordion-collapse collapse" aria-labelledby="headingWhat"
+                                data-bs-parent="#infoAccordion">
+                                <div class="accordion-body p-0">
+                                    <div class="list-group list-group-flush">
+                                        <a href="epc.html" class="list-group-item list-group-item-action">
+                                            EPC
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="consulting.html" class="list-group-item list-group-item-action">
+                                            Consulting
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="procurement.html" class="list-group-item list-group-item-action">
+                                            Procurement
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="investment.html" class="list-group-item list-group-item-action">
+                                            Investment
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="projectManagement.html" class="list-group-item list-group-item-action">
+                                            Project Management
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="operatingAndMaintance.html" class="list-group-item list-group-item-action">
+                                            Operation&Maintenance
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Media -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingMedia">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseMedia" aria-expanded="false" aria-controls="collapseMedia">
+                                    Media
+                                </button>
+                            </h2>
+                            <div id="collapseMedia" class="accordion-collapse collapse" aria-labelledby="headingMedia"
+                                data-bs-parent="#infoAccordion">
+                                <div class="accordion-body p-0">
+                                    <div class="list-group list-group-flush">
+                                        <a href="news.html" class="list-group-item list-group-item-action">
+                                            News
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="catalogues.html" class="list-group-item list-group-item-action">
+                                            Catalogues
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="gallery.html" class="list-group-item list-group-item-action">
+                                            Gallery
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                        <a href="socialMedia.html" class="list-group-item list-group-item-action">
+                                            Social Media
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path d="M14.25 2.625L3.75 13.125" stroke="#C90200" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M14.25 10.3275V2.625H6.5475" stroke="#C90200"
+                                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- header actions -->
+                    <div class="header-actions d-flex align-items-center">
+
+                        <div class="btn-group">
+
+                            <button type="button" class="btn select-language dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                ENG
+                                <img src="assets/icons/dropdown-icon.svg" alt="">
+                            </button>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">AZE</a></li>
+                                <li><a class="dropdown-item" href="#"></a></li>
+                            </ul>
+
+                        </div>
+
+                        <button class="btn btn-danger">Contact Us</button>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
 
         </header>
 
@@ -262,7 +622,7 @@
 
             <div class="card-intro d-flex flex-column">
                 <span class="section-name">VALUES & SUSTAINABILITY</span>
-                <span class="section-large-scale-title">
+                <span class="section-title">
                     Rooted in Integrity, Growing Sustainably
                     Our Commitment to Values and the Future
                 </span>
@@ -316,7 +676,6 @@
             </div>
 
         </section>
-
 
         <!-- core values -->
 
@@ -531,7 +890,6 @@
                     <a href="procurement.html">Procurement</a>
                     <a href="consulting.html">Consulting</a>
                     <a href="operatingAndMaintance.html">Operation & Maintenance</a>
-                    <a href="notFound.html">Electricity Trading</a>
                 </div>
 
                 <div class="d-flex flex-column">
@@ -545,9 +903,7 @@
                 <div class="d-flex flex-column">
                     <span>Office & Contact</span>
                     <a href="#">Contact Us</a>
-                    <a href="#">76 Division St. New York,
-                        ny 72374738, USA
-                    </a>
+                    <a href="#">76 Division St. New York,ny 72374738, USA</a>
                     <a href="#">+994 55 555 33 22</a>
                     <a href="#">avensol@info.com</a>
                 </div>
@@ -561,9 +917,10 @@
         <!-- bottom bar -->
 
         <div class="bottom-bar d-flex justify-content-between align-items-center">
+
             <span>Avensol LLC 2025. All Rights Reserved</span>
 
-            <div class="d-flex align-items-center">
+            <div class="d-flex privacy-and-policy align-items-center">
                 <span>Privacy Policy</span>
                 <span>Terms & Conditions</span>
             </div>

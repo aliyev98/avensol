@@ -1,29 +1,17 @@
 @use '../abstracts/mixins' as *;
 
 .topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     gap: 24px;
     background: #272729;
-    padding: 8px 200px !important;
+    padding: 8px 200px;
 
-    // @media (max-width: 1400px) {
-    //     max-width: 1390px !important;
-    // }
-
-    // @media (max-width: 1200px) {
-    //     max-width: 1190px !important;
-    // }
-
-    // @media (max-width: 992px) {
-    //     max-width: 982px !important;
-    // }
-
-    // @media (max-width: 768px) {
-    //     max-width: 758px !important;
-    // }
-
-    // @media (max-width: 556px) {
-    //     max-width: 546px !important;
-    // }
+    @include mq(phone-only){
+        justify-content: center;
+        padding: 8px 16px;
+    }
 
     button {
         gap: 12px;
