@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: 0;
@@ -1264,6 +1265,9 @@ footer .footer-bottom div a {
   }
 }
 
+.gallery-container {
+  /* Mobilde sadece tek kolona düşür; ÖNEMLİ: kart gizleme yok */
+}
 .gallery-container .gallery {
   -moz-column-count: 2;
        column-count: 2;
@@ -1271,17 +1275,17 @@ footer .footer-bottom div a {
        column-gap: 16px;
 }
 @media only screen and (max-width: 480px) {
+  .gallery-container {
+    /* ✖️ Aşağıdaki iki kuralı SİL:
+    .gallery__item { display: none; }
+    .gallery__item:nth-child(-n+10) { display: block; }
+    */
+  }
   .gallery-container .gallery {
     -moz-column-count: 1;
          column-count: 1;
     -moz-column-gap: 12px;
          column-gap: 12px;
-  }
-  .gallery-container .gallery__item {
-    display: none;
-  }
-  .gallery-container .gallery__item:nth-child(-n+10) {
-    display: block;
   }
 }
 @media (min-width: 768px) {

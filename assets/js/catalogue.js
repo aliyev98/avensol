@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const ul = document.getElementById('cataloguePagination');
   const sectionTop = document.getElementById('catalogue');
 
-  // if (totalPages <= 1) {
-  //   ul.parentElement.classList.add('d-none');
-  //   return;
-  // }
+  if (totalPages <= 1) {
+    ul.parentElement.classList.add('d-none');
+    return;
+  }
 
-  // let current = 1;
+  let current = 1;
 
   function showPage(page) {
     // sayfa sınırlarını koru

@@ -7,14 +7,16 @@
     column-gap: 16px;
   }
 
+  /* Mobilde sadece tek kolona düşür; ÖNEMLİ: kart gizleme yok */
   @include mq(phone-only) {
     .gallery {
       column-count: 1;
       column-gap: 12px;
     }
-
+    /* ✖️ Aşağıdaki iki kuralı SİL:
     .gallery__item { display: none; }
     .gallery__item:nth-child(-n+10) { display: block; }
+    */
   }
 
   @media (min-width: 768px) {
