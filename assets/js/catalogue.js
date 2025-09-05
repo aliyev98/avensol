@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function drawPagination() {
     pager.innerHTML = '';
 
-    // Back
     pager.appendChild(
       makeItem({
         html: `${icon('left')} <span>Back</span>`,
@@ -55,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     );
 
-    // 3 numaralık pencere
     const windowSize = Math.min(VISIBLE_PAGES, pages);
     let start = Math.max(1, Math.min(current - Math.floor(windowSize / 2), pages - windowSize + 1));
     let end = start + windowSize - 1;
@@ -73,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
       pager.appendChild(li);
     }
 
-    // Next
     pager.appendChild(
       makeItem({
         html: `<span>Next</span> ${icon('right')}`,
@@ -82,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     );
 
-    // Tek sayfa ise gizle, birden fazlaysa göster
     pager.parentElement.classList.toggle('d-none', pages <= 1);
   }
 
@@ -99,6 +95,5 @@ document.addEventListener('DOMContentLoaded', () => {
     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // Başlat
   showPage(1);
 });

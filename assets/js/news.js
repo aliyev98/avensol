@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const PAGE_SIZE = 9;
-  const VISIBLE_PAGES = 3; // <- her zaman en fazla 3 numara göster
+  const VISIBLE_PAGES = 3;
   const grid = document.getElementById('newsGrid');
   const cards = Array.from(grid.querySelectorAll('.news-card'));
   const pager = document.getElementById('newsPagination');
@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <path d="M10 17.7395L5 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>`;
     }
-    // right
     return `
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
         <path d="M19 12.7395H5" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -44,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function drawPagination() {
     pager.innerHTML = '';
 
-    // Back
     pager.appendChild(
       makeItem({
         html: `${icon('left')} <span>Back</span>`,
@@ -53,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     );
 
-    // --- SADECE 3 NUMARALIK PENCERE ---
     const windowSize = Math.min(VISIBLE_PAGES, pages);
     let start = Math.max(1, Math.min(current - Math.floor(windowSize / 2), pages - windowSize + 1));
     let end = start + windowSize - 1;
@@ -70,9 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       li.appendChild(a);
       pager.appendChild(li);
     }
-    // ----------------------------------
 
-    // Next
     pager.appendChild(
       makeItem({
         html: `<span>Next</span> ${icon('right')} `,
@@ -81,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     );
 
-    // Tek sayfa varsa pagination'ı gizle
     pager.parentElement.classList.toggle('d-none', pages <= 1);
   }
 

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const PAGE_SIZE = 9;
-  const VISIBLE_PAGES = 3; // en fazla 3 numara göster
+  const VISIBLE_PAGES = 3;
 
   const grid = document.getElementById('gallery');
   const pager = document.getElementById('galleryPagination');
@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!grid || !pager || !section) return;
 
-  // Gallery öğeleri (figure.gallery__item)
   const items = Array.from(grid.querySelectorAll('.gallery__item'));
   if (!items.length) return;
 
@@ -47,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function drawPagination() {
     pager.innerHTML = '';
 
-    // Back
     pager.appendChild(
       makeItem({
         html: `${icon('left')} <span>Back</span>`,
@@ -56,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     );
 
-    // --- 3 numaralık pencere ---
     const windowSize = Math.min(VISIBLE_PAGES, pages);
     let start = Math.max(1, Math.min(current - Math.floor(windowSize / 2), pages - windowSize + 1));
     let end = start + windowSize - 1;
@@ -74,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
       pager.appendChild(li);
     }
 
-    // Next
     pager.appendChild(
       makeItem({
         html: `<span>Next</span> ${icon('right')}`,
@@ -83,8 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     );
 
-    // Tek sayfa ise pagination'ı gizle
-    // pager.parentElement.classList.toggle('d-none', pages <= 1);
+    pager.parentElement.classList.toggle('d-none', pages <= 1);
   }
 
   function showPage(page) {
