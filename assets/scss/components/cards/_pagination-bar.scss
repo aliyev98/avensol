@@ -13,7 +13,7 @@
         display: flex;
         gap: 8px;
 
-        @include mq(phone-only){
+        @include mq(phone-only) {
             margin-right: auto;
         }
 
@@ -67,4 +67,5 @@
             }
         }
     }
+
 }
