@@ -1,51 +1,18 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const PAGE_SIZE = 6;
-  const VISIBLE_PAGES = 3; // <- her zaman en fazla 3 numara göster
+document.addEventListener('DOMContentLoaded', () => {
+  const PAGE_SIZE = 9;
+  const VISIBLE_PAGES = 3;
+
+  const section = document.getElementById('catalogue');
   const grid = document.getElementById('catalogueGrid');
+  const pager = document.getElementById('cataloguePagination');
+
+  if (!section || !grid || !pager) return;
+
   const cards = Array.from(grid.querySelectorAll('.catalogue-card'));
-  const totalPages = Math.ceil(cards.length / PAGE_SIZE);
+  if (!cards.length) return;
 
-  const ul = document.getElementById('cataloguePagination');
-  const sectionTop = document.getElementById('catalogue');
-
-  // if (totalPages <= 1) {
-  //   ul.parentElement.classList.add('d-none');
-  //   return;
-  // }
-
-  // let current = 1;
-
-  function showPage(page) {
-    // sayfa sınırlarını koru
-    current = Math.max(1, Math.min(page, totalPages));
-    const start = (current - 1) * PAGE_SIZE;
-    const end = start + PAGE_SIZE;
-
-    cards.forEach((card, i) => {
-      card.classList.toggle('d-none', !(i >= start && i < end));
-    });
-
-    drawPagination();
-    sectionTop.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-
-  function icon(name) {
-    if (name === 'left') {
-      return `
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-        <path d="M5 12.7395L19 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M10 7.7395L5 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M10 17.7395L5 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>`;
-    }
-    // right
-    return `
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-        <path d="M19 12.7395H5" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M14 17.7395L19 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M14 7.7395L19 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>`;
-  }
+  let current = 1;
+  const pages = Math.max(1, Math.ceil(cards.length / PAGE_SIZE));
 
   function makeItem({ html, enabled, onClick }) {
     const li = document.createElement('li');
@@ -54,18 +21,33 @@ document.addEventListener('DOMContentLoaded', function () {
     a.className = 'page-link d-inline-flex align-items-center gap-2';
     a.href = '#';
     a.innerHTML = html;
-    if (enabled) {
-      a.addEventListener('click', (e) => { e.preventDefault(); onClick(); });
-    }
+    if (enabled) a.addEventListener('click', (e) => { e.preventDefault(); onClick(); });
     li.appendChild(a);
     return li;
   }
 
-  function drawPagination() {
-    ul.innerHTML = '';
+  function icon(dir) {
+    if (dir === 'left') {
+      return `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M5 12.7395L19 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 7.7395L5 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 17.7395L5 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
+    }
+    return `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M19 12.7395H5" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 17.7395L19 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 7.7395L19 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
+  }
 
-    // BACK
-    ul.appendChild(
+  function drawPagination() {
+    pager.innerHTML = '';
+
+    // Back
+    pager.appendChild(
       makeItem({
         html: `${icon('left')} <span>Back</span>`,
         enabled: current > 1,
@@ -73,9 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     );
 
-    // --- SADECE 3 NUMARALIK PENCERE ---
-    const windowSize = Math.min(VISIBLE_PAGES, totalPages);
-    let start = Math.max(1, Math.min(current - Math.floor(windowSize / 2), totalPages - windowSize + 1));
+    // 3 numaralık pencere
+    const windowSize = Math.min(VISIBLE_PAGES, pages);
+    let start = Math.max(1, Math.min(current - Math.floor(windowSize / 2), pages - windowSize + 1));
     let end = start + windowSize - 1;
 
     for (let i = start; i <= end; i++) {
@@ -88,20 +70,35 @@ document.addEventListener('DOMContentLoaded', function () {
       if (i === current) a.setAttribute('aria-current', 'page');
       a.addEventListener('click', (e) => { e.preventDefault(); showPage(i); });
       li.appendChild(a);
-      ul.appendChild(li);
+      pager.appendChild(li);
     }
-    // ----------------------------------
 
-    // NEXT
-    ul.appendChild(
+    // Next
+    pager.appendChild(
       makeItem({
         html: `<span>Next</span> ${icon('right')}`,
-        enabled: current < totalPages,
+        enabled: current < pages,
         onClick: () => showPage(current + 1),
       })
     );
+
+    // Tek sayfa ise gizle, birden fazlaysa göster
+    pager.parentElement.classList.toggle('d-none', pages <= 1);
   }
 
-  // İlk sayfayı göster
+  function showPage(page) {
+    current = Math.max(1, Math.min(page, pages));
+    const start = (current - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+
+    cards.forEach((card, i) => {
+      card.classList.toggle('d-none', !(i >= start && i < end));
+    });
+
+    drawPagination();
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Başlat
   showPage(1);
 });
