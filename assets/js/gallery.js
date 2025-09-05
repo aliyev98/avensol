@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     // Tek sayfa ise pagination'ı gizle
-    pager.parentElement.classList.toggle('d-none', pages <= 1);
+    // pager.parentElement.classList.toggle('d-none', pages <= 1);
   }
 
   function showPage(page) {
