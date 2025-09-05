@@ -1273,7 +1273,6 @@ footer .footer-bottom div a {
        column-count: 2;
   -moz-column-gap: 16px;
        column-gap: 16px;
-  background-color: red;
 }
 @media only screen and (max-width: 480px) {
   .gallery-container {

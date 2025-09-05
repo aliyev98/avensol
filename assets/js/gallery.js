@@ -3,14 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const items = Array.from(gallery.querySelectorAll('.gallery__item'));
   const pager = document.getElementById('galleryPagination');
 
-  const ROWS_PER_PAGE = 3;
-  const VISIBLE_PAGES = 3; // <- her zaman en fazla 3 numara göster
-  let current = 1;
+  // <768px mobil kabul edelim (mixindeki phone-only ile uyumlu)
+  const mql = window.matchMedia('(max-width: 767.98px)');
+  const DESKTOP_ROWS = 3;
 
-  // Aktif kolon sayısını CSS'ten oku
+  const rowsPerPage = () => (mql.matches ? 10 : DESKTOP_ROWS);
+
   const getCols = () => parseInt(getComputedStyle(gallery).columnCount) || 1;
-  const pageSize = () => getCols() * ROWS_PER_PAGE;
+  const pageSize = () => getCols() * rowsPerPage();
   const totalPages = () => Math.max(1, Math.ceil(items.length / pageSize()));
+
+  const VISIBLE_PAGES = 3;
+  let current = 1;
 
   function icon(name) {
     if (name === 'left') {
@@ -21,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <path d="M10 17.7395L5 12.7395" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>`;
     }
-    // right
     return `
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
         <path d="M19 12.7395H5" stroke="#C90200" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -43,7 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function drawPagination() {
+    pager.classList.remove('d-none');          // garanti
+    pager.parentElement?.classList?.remove('d-none');
     pager.innerHTML = '';
+
     const pages = totalPages();
 
     // Prev
@@ -53,9 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
       onClick: () => showPage(current - 1)
     }));
 
-    // --- SADECE 3 NUMARA GÖRÜNECEK ŞEKİLDE PENCERE HESABI ---
+    // 3’lük pencere
     const windowSize = Math.min(VISIBLE_PAGES, pages);
-    // orta merkezli pencere: (1..pages) aralığında kalacak
     let start = Math.max(1, Math.min(current - Math.floor(windowSize / 2), pages - windowSize + 1));
     let end = start + windowSize - 1;
 
@@ -71,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
       li.appendChild(a);
       pager.appendChild(li);
     }
-    // --------------------------------------------------------
 
     // Next
     pager.appendChild(makeItem({
@@ -89,20 +93,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     items.forEach((el, i) => el.classList.toggle('d-none', !(i >= start && i < end)));
     drawPagination();
-    if (doScroll) document.getElementById('gallerySection')
-      .scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (doScroll) {
+      const isPhone = mql.matches;
+      const target = isPhone ? pager : document.getElementById('gallerySection');
+      target.scrollIntoView({ behavior: 'smooth', block: isPhone ? 'nearest' : 'start' });
+    }
   }
 
-  // Ekran yeniden boyutlanınca kolon sayısı değişirse sayfayı yenile
+  // Değişiklikleri dinle: kolon sayısı ve breakpoint
   let lastCols = getCols();
-  window.addEventListener('resize', () => {
-    const now = getCols();
-    if (now !== lastCols) {
-      lastCols = now;
-      // kolon sayısı değişti → sayfa boyutunu güncelle, başa dön
+  function handleLayoutChange() {
+    const nowCols = getCols();
+    if (nowCols !== lastCols) {
+      lastCols = nowCols;
+      showPage(1, false);
+    } else {
+      // Sadece breakpoint değiştiyse de yenile
       showPage(1, false);
     }
-  });
+  }
+  window.addEventListener('resize', handleLayoutChange);
+  mql.addEventListener?.('change', handleLayoutChange);   // iOS/Safari destekli
 
   showPage(1);
 });
