@@ -980,12 +980,6 @@ footer .footer-bottom div a {
   border-radius: 6px;
   overflow: hidden;
 }
-.homepage-container .our-news-section .our-news-video img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .homepage-container .our-news-section .our-news-intro {
   width: 60%;
 }
