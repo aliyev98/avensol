@@ -17,15 +17,16 @@
 
         <div class="topbar">
 
-            <button class="d-flex align-items-center">
+            <a href="tel:+994501234567" aria-label="Call +994 50 123 45 67" class="d-flex align-items-center">
                 <img src="assets/icons/topbar-phone.svg" alt="">
                 <span>+994 55 555 33 22</span>
-            </button>
+            </a>
 
-            <button class="d-flex align-items-center">
+            <a href="mailto:info@ornek.com" aria-label="info@ornek.com adresine e-posta gönder class=" d-flex
+                align-items-center">
                 <img src="assets/icons/topbar-email.svg" alt="">
                 <span>avensol@info.com</span>
-            </button>
+            </a>
 
         </div>
 
@@ -228,22 +229,22 @@
 
             <div class="header-actions d-flex align-items-center">
 
-                <div class="btn-group">
-
-                    <button type="button" class="btn select-language dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        ENG
+                <div class="btn-group" id="langDropdown">
+                    <button type="button"
+                        class="btn select-language dropdown-toggle d-inline-flex align-items-center gap-2"
+                        data-bs-toggle="dropdown" aria-expanded="false" id="langToggle">
+                        <span class="selected-lang">AZE</span>
                         <img src="assets/icons/dropdown-icon.svg" alt="">
                     </button>
 
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">AZE</a></li>
-                        <li><a class="dropdown-item" href="#"></a></li>
+                    <ul class="dropdown-menu" id="langMenu">
+                        <li><a class="dropdown-item" href="#" data-lang="az" data-label="AZE">AZE</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="ru" data-label="RU">RU</a></li>
                     </ul>
-
                 </div>
 
-                <button class="btn btn-danger">Contact Us</button>
+
+                <a href="/contactUs.html" class="btn btn-danger">Contact Us</a>
 
             </div>
 
@@ -313,7 +314,8 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </a>
-                                        <a href="valuesSustainability.html" class="list-group-item list-group-item-action">
+                                        <a href="valuesSustainability.html"
+                                            class="list-group-item list-group-item-action">
                                             Values&Sustainability
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                 viewBox="0 0 18 18" fill="none">
@@ -325,7 +327,8 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </a>
-                                        <a href="ethicsAndGovernence.html" class="list-group-item list-group-item-action">
+                                        <a href="ethicsAndGovernence.html"
+                                            class="list-group-item list-group-item-action">
                                             Ethics&Governance
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                 viewBox="0 0 18 18" fill="none">
@@ -391,7 +394,8 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </a>
-                                        <a href="transmissionNetworks.html" class="list-group-item list-group-item-action">
+                                        <a href="transmissionNetworks.html"
+                                            class="list-group-item list-group-item-action">
                                             Transmission Networks
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                 viewBox="0 0 18 18" fill="none">
@@ -403,7 +407,8 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </a>
-                                        <a href="energyStorageSystems.html" class="list-group-item list-group-item-action">
+                                        <a href="energyStorageSystems.html"
+                                            class="list-group-item list-group-item-action">
                                             Energy Storage Systems
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                 viewBox="0 0 18 18" fill="none">
@@ -504,7 +509,8 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </a>
-                                        <a href="operatingAndMaintance.html" class="list-group-item list-group-item-action">
+                                        <a href="operatingAndMaintance.html"
+                                            class="list-group-item list-group-item-action">
                                             Operation&Maintenance
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                 viewBox="0 0 18 18" fill="none">
@@ -867,7 +873,7 @@
 
             <div class="feature-cards justify-content-center">
 
-                <div class="feature-card">
+                <a href="solar.html" class="feature-card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
                         <path
                             d="M36.2788 8.91841C35.6162 8.91841 35.0785 8.3807 35.0785 7.71804V1.93962C35.0785 1.27695 35.6162 0.739258 36.2788 0.739258C36.9415 0.739258 37.4792 1.27695 37.4792 1.93962V7.71804C37.4792 8.3807 36.9415 8.91841 36.2788 8.91841Z"
@@ -911,9 +917,9 @@
                         energy. 
                     </span>
 
-                </div>
+                </a>
 
-                <div class="feature-card">
+                <a href="wind.html" class="feature-card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="68" height="71" viewBox="0 0 68 71" fill="none">
                         <path
                             d="M17.5038 23.7916C15.4738 23.7916 13.8238 22.1398 13.8238 20.1116C13.8238 18.0835 15.4756 16.4316 17.5038 16.4316C19.5319 16.4316 21.1838 18.0835 21.1838 20.1116C21.1838 22.1398 19.5319 23.7916 17.5038 23.7916ZM17.5038 18.7571C16.7568 18.7571 16.1493 19.3646 16.1493 20.1116C16.1493 20.8586 16.7568 21.4662 17.5038 21.4662C18.2508 21.4662 18.8584 20.8586 18.8584 20.1116C18.8584 19.3646 18.2508 18.7571 17.5038 18.7571Z"
@@ -965,9 +971,9 @@
                         Capturing wind energy through advanced turbines for a more sustainable and balanced energy mix.
                     </span>
 
-                </div>
+                </a>
 
-                <div class="feature-card">
+                <a href="hydro.html" class="feature-card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="56" height="71" viewBox="0 0 56 71" fill="none">
                         <path
                             d="M27.9899 0.739258C29.1361 1.60882 30.2428 2.30053 31.2112 3.17009C38.484 9.67208 45.1638 16.7077 50.2034 25.1464C53.2666 30.2848 55.3615 35.7196 55.8555 41.767C56.7053 52.0635 50.3022 63.9607 38.9188 68.6445C27.1796 73.4864 13.7211 70.1267 6.1519 60.4627C0.638054 53.4073 -1.18013 45.4627 0.914734 36.7077C2.12027 31.6682 4.49182 27.1227 7.29814 22.8144C11.3298 16.6089 16.2112 11.1148 21.5669 6.03571C23.4642 4.23729 25.1835 2.20171 27.9899 0.739258ZM27.6341 3.92108C20.144 10.6207 13.2468 17.6168 8.12819 26.1938C5.95427 29.8302 4.15585 33.6049 3.24675 37.7749C-0.527957 55.186 14.3337 71.6287 33.2468 67.9923C46.5077 65.4429 57.2982 51.2927 51.9623 35.2848C50.1045 29.7314 47.1994 24.7709 43.7014 20.1069C40.4603 15.7788 36.7251 11.8855 32.8318 8.15034C31.3298 6.70765 30.0255 5.0278 27.6341 3.92108Z"
@@ -987,9 +993,9 @@
                         technologies. 
                     </span>
 
-                </div>
+                </a>
 
-                <div class="feature-card">
+                <a href="transmissionNetworks.html" class="feature-card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="78" height="74" viewBox="0 0 78 74" fill="none">
                         <path
                             d="M76.1117 39.0857H40.3481C39.7633 39.0857 39.2618 38.6732 39.1457 38.1021L31.9256 2.30942C31.852 1.94929 31.9449 1.57366 32.1792 1.28904C32.4116 1.00442 32.7601 0.839844 33.128 0.839844H68.8916C69.4763 0.839844 69.9778 1.25226 70.0939 1.82343L77.314 37.6161C77.3876 37.9762 77.2947 38.3499 77.0604 38.6345C76.828 38.9191 76.4795 39.0837 76.1117 39.0837V39.0857ZM41.3529 36.6325H74.613L67.8867 3.29301H34.6266L41.3529 36.6325Z"
@@ -1020,9 +1026,9 @@
                         Designing and implementing efficient power transmission systems for reliable energy delivery.
                     </span>
 
-                </div>
+                </a>
 
-                <div class="feature-card">
+                <a href="energyStorageSystems.html" class="feature-card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="76" height="73" viewBox="0 0 76 73" fill="none">
                         <path
                             d="M74.6803 60.0539H1.31905C0.833109 60.0539 0.387661 59.7786 0.171012 59.3432C-0.0456381 58.9079 0.00295637 58.3876 0.294522 57.9988L17.4868 35.206C17.7298 34.8841 18.1084 34.6958 18.5113 34.6958H57.488C57.8909 34.6958 58.2696 34.8841 58.5125 35.206L75.7048 57.9988C75.9984 58.3876 76.045 58.9079 75.8283 59.3432C75.6117 59.7786 75.1662 60.0539 74.6803 60.0539ZM3.89455 57.4886H72.1068L56.8502 37.2612H19.1511L3.89455 57.4886Z"
@@ -1069,9 +1075,9 @@
                         independence.
                     </span>
 
-                </div>
+                </a>
 
-                <div class="feature-card">
+                <a href="dataCenters.html" class="feature-card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="72" height="73" viewBox="0 0 72 73" fill="none">
                         <path d="M47.9916 21.8251H53.9874" stroke="#C90200" stroke-width="3" stroke-linecap="round"
                             stroke-linejoin="round" />
@@ -1107,7 +1113,7 @@
                         Powering digital infrastructure with optimized, secure, and energy-efficient systems.
                     </span>
 
-                </div>
+                </a>
 
             </div>
 
@@ -1167,10 +1173,15 @@
 
                 <div class="d-flex flex-column">
                     <span>Office & Contact</span>
-                    <a href="#">Contact Us</a>
+                    <a href="contactUs.html">Contact Us</a>
                     <a href="#">76 Division St. New York,ny 72374738, USA</a>
-                    <a href="#">+994 55 555 33 22</a>
-                    <a href="#">avensol@info.com</a>
+                    <a href="tel:+994501234567" aria-label="Call +994 50 123 45 67">
+                        +994 50 123 45 67
+                    </a>
+                    <a href="mailto:info@ornek.com" aria-label="info@ornek.com adresine e-posta gönder">
+                        info@ornek.com
+                    </a>
+
                 </div>
 
             </div>
@@ -1186,8 +1197,8 @@
             <span>Avensol LLC 2025. All Rights Reserved</span>
 
             <div class="d-flex privacy-and-policy align-items-center">
-                <span>Privacy Policy</span>
-                <span>Terms & Conditions</span>
+                <a href="privacyPolicy.html">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
             </div>
 
             <div class="social-media-links d-flex align-items-center">
@@ -1207,6 +1218,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/dropdown.js"></script>
+
 </body>
 
 </html>

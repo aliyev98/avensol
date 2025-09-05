@@ -19,6 +19,7 @@
         background: #FFF;
         cursor: pointer;
         transition: all .2s ease-in;
+        text-decoration: none;
 
         &:hover {
             background-color: red;
@@ -29,6 +30,10 @@
 
             .feature-card-description {
                 color: white;
+            }
+
+            svg{
+                 filter: brightness(0) invert(1)
             }
         }
 

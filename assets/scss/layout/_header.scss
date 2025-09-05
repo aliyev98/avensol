@@ -72,6 +72,10 @@ header {
                         color: rgba(1, 2, 3, 0.70);
                         font-size: 16px;
                         font-weight: 500;
+
+                        &:hover {
+                            background-color: transparent;
+                        }
                     }
 
                 }
@@ -105,6 +109,19 @@ header {
             }
 
         }
+
+        .dropdown-menu {
+            padding: 16px;
+
+            .dropdown-item {
+                padding: 0;
+
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
     }
 
     .canvas-btn {
@@ -115,7 +132,7 @@ header {
 
     .offcanvas {
 
-        .header-actions{
+        .header-actions {
             display: flex !important;
             margin-top: 70px;
         }

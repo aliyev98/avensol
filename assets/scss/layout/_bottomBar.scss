@@ -4,11 +4,19 @@
     padding: 16px 200px !important;
     background: #272729;
 
-    div{
+    div {
         gap: 72px;
     }
 
     span {
+        color: var(--Neutral-colors-White, #FFF);
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    a {
+        text-decoration: none;
         color: var(--Neutral-colors-White, #FFF);
         text-align: center;
         font-size: 12px;
@@ -30,12 +38,12 @@
         }
     }
 
-    @include mq(phone-only){
+    @include mq(phone-only) {
         flex-direction: column;
         padding: 16px !important;
         gap: 16px;
 
-        .privacy-and-policy{
+        .privacy-and-policy {
             order: -1;
         }
     }
