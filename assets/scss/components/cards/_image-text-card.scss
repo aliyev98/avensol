@@ -42,7 +42,7 @@
 
     }
 
-    @include mq(phone-only){
+    @include mq(tablet-portrait-up){
         flex-direction: column;
         gap: 32px;
 

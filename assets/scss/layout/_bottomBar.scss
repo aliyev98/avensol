@@ -38,7 +38,7 @@
         }
     }
 
-    @include mq(phone-only) {
+    @include mq(tablet-portrait-up) {
         flex-direction: column;
         padding: 16px !important;
         gap: 16px;

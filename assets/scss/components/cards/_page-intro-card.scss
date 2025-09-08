@@ -2,6 +2,7 @@
 
 .page-intro-card {
     background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+    justify-content: space-between;
 
     .card-intro {
         width: 50%;
@@ -14,9 +15,12 @@
         height: fit-content;
         max-height: 500px;
         overflow: hidden;
+        width: 690px;
+        height: 100%;
+
     }
 
-    @include mq(phone-only) {
+    @include mq(tablet-portrait-up) {
         flex-direction: column;
 
         .section-image {

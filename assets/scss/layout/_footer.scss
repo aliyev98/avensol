@@ -55,7 +55,7 @@ footer {
 
     }
 
-    @include mq(phone-only) {
+    @include mq(tablet-portrait-up) {
         padding: 32px 16px !important;
         gap: 0;
 

@@ -44,7 +44,7 @@
 
         }
 
-        @include mq(phone-only){
+        @include mq(tablet-portrait-up){
             padding: 50px 16px;
         }
     }

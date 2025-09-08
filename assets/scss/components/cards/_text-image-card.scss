@@ -27,7 +27,7 @@
         overflow: hidden;
     }
 
-    @include mq(phone-only){
+    @include mq(tablet-portrait-up){
         gap: 32px;
         flex-direction: column;
 

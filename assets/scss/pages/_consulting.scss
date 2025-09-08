@@ -27,7 +27,7 @@
             }
         }
 
-        @include mq(phone-only) {
+        @include mq(tablet-portrait-up) {
             padding: 50px 16px;
             flex-direction: column;
 
@@ -41,7 +41,7 @@
         gap: 32px;
         padding: 50px 200px 100px 200px;
 
-        @include mq(phone-only) {
+        @include mq(tablet-portrait-up) {
             padding: 50px 16px;
         }
 

@@ -8,9 +8,13 @@
     background: #272729;
     padding: 8px 200px;
 
-    @include mq(phone-only){
+    @include mq(tablet-portrait-up){
         justify-content: center;
         padding: 8px 16px;
+    }
+
+    @include mq(desktop-up){
+        padding: 8px 100px;
     }
 
     a {

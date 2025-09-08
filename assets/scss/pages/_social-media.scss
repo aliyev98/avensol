@@ -55,7 +55,7 @@
             }
         }
 
-        @include mq(phone-only) {
+        @include mq(tablet-portrait-up) {
             padding: 72px 16px;
 
             .feeds {

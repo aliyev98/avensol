@@ -26,7 +26,7 @@
         }
     }
 
-    @include mq(phone-only){
+    @include mq(tablet-portrait-up){
 
         .sustainabilty-practise{
             padding: 50px 16px;
@@ -34,9 +34,6 @@
 
         .core-values{
             padding: 50px 16px;
-
-            .section-header{
-            }
 
             .section-body{
                 flex-direction: column;

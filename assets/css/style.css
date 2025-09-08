@@ -17,10 +17,15 @@ body .card-header {
   background: #272729;
   padding: 8px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .topbar {
     justify-content: center;
     padding: 8px 16px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .topbar {
+    padding: 8px 100px;
   }
 }
 .topbar a {
@@ -41,9 +46,8 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   header {
-    padding: 12px 24px;
     justify-content: space-between;
   }
   header nav {
@@ -57,19 +61,19 @@ header {
   }
 }
 header .logo {
-  width: 100px;
-  height: 40px;
+  height: 50px;
 }
 header .logo img {
-  width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 header nav {
   padding: 8px 0;
 }
 header nav .nav-tabs {
+  gap: 10px;
   border: none;
 }
 header nav .nav-tabs .nav-item .nav-link,
@@ -111,10 +115,12 @@ header nav .nav-tabs .dropdown .dropdown-menu .dropdown-item {
   color: rgba(1, 2, 3, 0.7);
   font-size: 16px;
   font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.5s ease-in;
 }
 header nav .nav-tabs .nav-item .dropdown-menu .dropdown-item:hover,
 header nav .nav-tabs .dropdown .dropdown-menu .dropdown-item:hover {
-  background-color: transparent;
+  background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
 }
 header nav .dropdown-toggle::after {
   display: none;
@@ -226,7 +232,7 @@ footer .footer-bottom div a {
   text-decoration: none;
   cursor: pointer !important;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   footer {
     padding: 32px 16px !important;
     gap: 0;
@@ -283,7 +289,7 @@ footer .footer-bottom div a {
   cursor: pointer;
   z-index: 9;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .bottom-bar {
     flex-direction: column;
     padding: 16px !important;
@@ -317,7 +323,7 @@ footer .footer-bottom div a {
   font-weight: 500;
   line-height: 140%;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .section-title {
     text-align: center;
   }
@@ -330,7 +336,7 @@ footer .footer-bottom div a {
   font-weight: 400;
   line-height: 20px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .section-description {
     text-align: center;
   }
@@ -415,7 +421,7 @@ footer .footer-bottom div a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .feature-cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -433,7 +439,7 @@ footer .footer-bottom div a {
   text-decoration: none;
 }
 .feature-cards .feature-card:hover {
-  background-color: red;
+  background-color: #C90200;
 }
 .feature-cards .feature-card:hover .feature-card-title {
   color: white;
@@ -467,7 +473,7 @@ footer .footer-bottom div a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .icon-heading-cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -524,6 +530,7 @@ footer .footer-bottom div a {
 
 .page-intro-card {
   background: var(--Neutral-colors-Light-Gray, #F8F9FA);
+  justify-content: space-between;
 }
 .page-intro-card .card-intro {
   width: 50%;
@@ -536,8 +543,10 @@ footer .footer-bottom div a {
   height: fit-content;
   max-height: 500px;
   overflow: hidden;
+  width: 690px;
+  height: 100%;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .page-intro-card {
     flex-direction: column;
   }
@@ -605,7 +614,7 @@ footer .footer-bottom div a {
   display: flex;
   gap: 8px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .pagination-bar ul {
     margin-right: auto;
   }
@@ -676,6 +685,7 @@ footer .footer-bottom div a {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  text-decoration: none;
 }
 .news-card .read-more {
   background-color: transparent;
@@ -727,7 +737,7 @@ footer .footer-bottom div a {
   font-weight: 400;
   line-height: 20px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .image-text-card {
     flex-direction: column;
     gap: 32px;
@@ -761,7 +771,7 @@ footer .footer-bottom div a {
   height: 428px;
   overflow: hidden;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .text-image-card {
     gap: 32px;
     flex-direction: column;
@@ -794,7 +804,7 @@ footer .footer-bottom div a {
 .media-checklist-card {
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .media-checklist-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -902,7 +912,7 @@ footer .footer-bottom div a {
   font-size: 14px;
   font-weight: 400;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .homepage-container .hero-section .hero-content {
     width: 100%;
     top: 50%;
@@ -920,12 +930,12 @@ footer .footer-bottom div a {
   }
 }
 .homepage-container .where-we-do {
-  padding: 50px 200px;
+  padding: 100px 200px;
 }
 .homepage-container .where-we-do .section-title {
   text-align: center;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .homepage-container .where-we-do {
     padding: 50px 16px;
   }
@@ -936,17 +946,17 @@ footer .footer-bottom div a {
 .homepage-container .what-we-do .section-title {
   text-align: center;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .homepage-container .what-we-do {
     padding: 50px 16px;
   }
 }
 .homepage-container .values-and-sustainability {
   background: var(--Neutral-colors-Light-Gray, #F8F9FA);
-  padding: 70px var(--200px, 200px);
+  padding: 100px 200px;
   gap: 50px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .homepage-container .values-and-sustainability {
     padding: 70px 16px;
     flex-direction: column;
@@ -955,7 +965,7 @@ footer .footer-bottom div a {
 .homepage-container .values-and-sustainability .section-intro {
   width: 30%;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .homepage-container .values-and-sustainability .section-intro {
     justify-content: center;
     align-items: center;
@@ -966,19 +976,50 @@ footer .footer-bottom div a {
   width: 70%;
   gap: 24px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .homepage-container .values-and-sustainability .icon-heading-cards {
     width: 100%;
   }
 }
 .homepage-container .our-news-section {
-  padding: 50px 100px 50px 100px;
+  padding: 100px;
 }
 .homepage-container .our-news-section .our-news-video {
   width: 40%;
   height: 350px;
+  position: relative;
   border-radius: 6px;
   overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+.homepage-container .our-news-section .our-news-video .poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+.homepage-container .our-news-section .our-news-video .play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+}
+.homepage-container .our-news-section .our-news-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.homepage-container .our-news-section .our-news-video.is-playing .poster,
+.homepage-container .our-news-section .our-news-video.is-playing .play {
+  display: none;
 }
 .homepage-container .our-news-section .our-news-intro {
   width: 60%;
@@ -1015,7 +1056,7 @@ footer .footer-bottom div a {
   padding: 8px 16px;
   gap: 10px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .homepage-container .our-news-section {
     padding: 50px 16px;
     flex-direction: column;
@@ -1055,7 +1096,7 @@ footer .footer-bottom div a {
   gap: 32px;
   width: 50%;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .values-and-sustainability-container .sustainabilty-practise {
     padding: 50px 16px;
   }
@@ -1076,7 +1117,7 @@ footer .footer-bottom div a {
 .who-we-are-container .our-identity-vision {
   padding: 100px 200px 50px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .who-we-are-container .our-identity-vision {
     padding: 50px 16px;
   }
@@ -1093,13 +1134,17 @@ footer .footer-bottom div a {
   line-height: 140%;
 }
 .who-we-are-container .our-team .section-body .text-content {
+  width: 50%;
   color: var(--Neutral-colors-Dark-Gray, #3C3C3C);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
 }
-@media only screen and (max-width: 480px) {
+.who-we-are-container .our-team .section-body .section-image {
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
   .who-we-are-container .our-team {
     padding: 32px 16px;
   }
@@ -1120,7 +1165,7 @@ footer .footer-bottom div a {
 .ethics-and-governence-container .foundation-of-every-decision {
   padding: 100px 200px 50px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .ethics-and-governence-container .foundation-of-every-decision {
     padding: 50px 16px;
   }
@@ -1135,7 +1180,7 @@ footer .footer-bottom div a {
 .ethics-and-governence-container .core-values .section-body .section-image {
   width: 50%;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .ethics-and-governence-container .core-values {
     padding: 50px 16px 100px 16px;
   }
@@ -1157,7 +1202,7 @@ footer .footer-bottom div a {
 .our-purpose-container .renewable-energy {
   padding: 100px 200px 50px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .our-purpose-container .renewable-energy {
     padding: 50px 16px;
   }
@@ -1192,7 +1237,7 @@ footer .footer-bottom div a {
   font-weight: 400;
   line-height: 20px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .our-purpose-container .power-change {
     padding: 50px 16px 100px 16px;
   }
@@ -1222,7 +1267,7 @@ footer .footer-bottom div a {
   gap: 24px;
   width: 50%;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .principles-container .core-principles {
     padding: 32px 16px;
   }
@@ -1253,7 +1298,7 @@ footer .footer-bottom div a {
        column-gap: 24px;
   row-gap: 50px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .catalogues-container .catalogue-cards-container {
     padding: 50px 16px;
   }
@@ -1268,7 +1313,7 @@ footer .footer-bottom div a {
   -moz-column-gap: 16px;
        column-gap: 16px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .gallery-container .gallery {
     -moz-column-count: 1;
          column-count: 1;
@@ -1327,7 +1372,7 @@ footer .footer-bottom div a {
        column-gap: 24px;
   row-gap: 50px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .news-page-container .news-section {
     padding: 100px 16px;
   }
@@ -1413,7 +1458,7 @@ footer .footer-bottom div a {
   display: flex;
   gap: 24px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .news-details-page-container .news-header {
     padding: 50px 16px;
   }
@@ -1498,7 +1543,7 @@ footer .footer-bottom div a {
   max-height: 100% !important;
   border: 0;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .social-media-page-container .latest-linkedin-feeds {
     padding: 72px 16px;
   }
@@ -1513,7 +1558,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .solar-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1521,7 +1566,7 @@ footer .footer-bottom div a {
 .solar-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .solar-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1530,7 +1575,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .solar-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1540,7 +1585,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .wind-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1548,7 +1593,7 @@ footer .footer-bottom div a {
 .wind-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .wind-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1557,7 +1602,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .wind-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1567,7 +1612,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .hydro-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1575,7 +1620,7 @@ footer .footer-bottom div a {
 .hydro-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .hydro-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1584,7 +1629,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .hydro-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1594,7 +1639,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .transmission-networks-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1602,7 +1647,7 @@ footer .footer-bottom div a {
 .transmission-networks-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .transmission-networks-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1611,7 +1656,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .transmission-networks-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1621,7 +1666,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .energy-storage-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1629,7 +1674,7 @@ footer .footer-bottom div a {
 .energy-storage-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .energy-storage-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1638,7 +1683,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .energy-storage-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1648,7 +1693,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .data-centers-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1656,7 +1701,7 @@ footer .footer-bottom div a {
 .data-centers-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .data-centers-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1665,7 +1710,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .data-centers-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1785,7 +1830,7 @@ footer .footer-bottom div a {
   width: 100%;
   height: 100%;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .contact-us-page-container .contact-us-form-container {
     padding: 50px 16px;
   }
@@ -1854,7 +1899,7 @@ footer .footer-bottom div a {
   font-weight: 400;
   line-height: 20px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .privacy-policy-page-container .text-content {
     padding: 50px 16px;
   }
@@ -1891,7 +1936,7 @@ footer .footer-bottom div a {
 .not-found-page-container .centered-div .image-for-phone {
   display: none;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .not-found-page-container .centered-div-header .title {
     text-align: center;
   }
@@ -1909,7 +1954,7 @@ footer .footer-bottom div a {
 .epc-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .epc-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -1923,7 +1968,7 @@ footer .footer-bottom div a {
 .epc-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .epc-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -1936,7 +1981,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .epc-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1951,7 +1996,7 @@ footer .footer-bottom div a {
 .project-management-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .project-management-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -1965,7 +2010,7 @@ footer .footer-bottom div a {
 .project-management-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .project-management-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -1978,7 +2023,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .project-management-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1993,7 +2038,7 @@ footer .footer-bottom div a {
 .procurement-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .procurement-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -2007,7 +2052,7 @@ footer .footer-bottom div a {
 .procurement-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .procurement-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -2020,7 +2065,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .procurement-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -2049,7 +2094,7 @@ footer .footer-bottom div a {
 .consulting-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .consulting-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -2062,7 +2107,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .consulting-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -2077,7 +2122,7 @@ footer .footer-bottom div a {
 .operating-maintance-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .operating-maintance-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -2091,7 +2136,7 @@ footer .footer-bottom div a {
 .operating-maintance-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .operating-maintance-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -2104,7 +2149,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .operating-maintance-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -2119,7 +2164,7 @@ footer .footer-bottom div a {
 .investment-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .investment-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -2133,7 +2178,7 @@ footer .footer-bottom div a {
 .investment-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .investment-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -2146,7 +2191,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .investment-page-container .feature-cards-section {
     padding: 50px 16px;
   }

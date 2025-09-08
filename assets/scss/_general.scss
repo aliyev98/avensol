@@ -20,7 +20,7 @@
     font-weight: 500;
     line-height: 140%;
 
-    @include mq(phone-only) {
+    @include mq(tablet-portrait-up) {
         text-align: center;
     }
 }
@@ -32,7 +32,7 @@
     font-weight: 400;
     line-height: 20px;
 
-    @include mq(phone-only) {
+    @include mq(tablet-portrait-up) {
         text-align: center;
     }
 }
