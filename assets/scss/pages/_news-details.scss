@@ -100,7 +100,7 @@
         }
     }
 
-    @include mq(tablet-portrait-up) {
+    @include mq(tablet-landscape-up) {
 
         .news-header {
             padding: 50px 16px;

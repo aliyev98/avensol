@@ -6,8 +6,13 @@ header {
     justify-content: space-around;
     align-items: center;
 
-    @include mq(tablet-portrait-up) {
+    @include mq(desktop-up) {
+        padding: 8px 50px;
+    }
+
+    @include mq(tablet-landscape-up) {
         justify-content: space-between;
+        padding: 8px 100px;
 
         nav {
             display: none;
@@ -21,6 +26,7 @@ header {
             display: block !important;
         }
     }
+
 
     .logo {
         height: 50px;
@@ -64,23 +70,34 @@ header {
                 .dropdown-menu {
                     padding: 32px 24px;
                     min-width: 307px;
+                    overflow: visible;
+                    transition: min-width .5s ease, padding-right .25s ease;
                     border: none;
 
                     .dropdown-item {
                         @include flex(space-between, center);
-                        padding: 12px;
                         color: rgba(1, 2, 3, 0.70);
+                        padding: 12px;
                         font-size: 16px;
                         font-weight: 500;
                         border-radius: 6px;
                         transition: all .5s ease-in;
+                        transform-origin: left center;
+                        will-change: transform;
+                        background-color: white;
+
 
                         &:hover {
-                            background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
-
+                            transform: scaleX(1.1);
                         }
                     }
 
+                }
+
+                .dropdown-menu:has(.dropdown-item:hover),
+                .dropdown-menu:has(.dropdown-item:focus-visible) {
+                    min-width: calc(307px * 1.11);
+                    padding-right: 32px;
                 }
 
             }

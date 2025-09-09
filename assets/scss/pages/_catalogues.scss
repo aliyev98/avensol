@@ -17,7 +17,7 @@
 
         }
 
-        @include mq(tablet-portrait-up) {
+        @include mq(tablet-landscape-up) {
             padding: 50px 16px;
 
             .catalogue-cards{

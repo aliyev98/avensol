@@ -3,6 +3,7 @@
 .bottom-bar {
     padding: 16px 200px !important;
     background: #272729;
+    gap: 20px;
 
     div {
         gap: 72px;
@@ -38,7 +39,21 @@
         }
     }
 
-    @include mq(tablet-portrait-up) {
+    .created-by-div {
+
+        img {
+            width: 25px;
+            height: 20px;
+        }
+
+
+    }
+
+    @include mq(desktop-up) {
+        padding: 16px 16px !important;
+    }
+
+    @include mq(tablet-landscape-up) {
         flex-direction: column;
         padding: 16px !important;
         gap: 16px;
@@ -47,14 +62,4 @@
             order: -1;
         }
     }
-
-    .created-by-div{
-
-        img{
-            width: 25px;
-            height: 20px;
-    }
-
-
-}
 }

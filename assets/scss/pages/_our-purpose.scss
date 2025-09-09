@@ -5,7 +5,7 @@
     .renewable-energy {
         padding: 100px 200px 50px 200px;
 
-        @include mq(tablet-portrait-up){
+        @include mq(tablet-landscape-up){
             padding: 50px 16px;
         }
     }
@@ -51,7 +51,7 @@
             }
         }
 
-        @include mq(tablet-portrait-up){
+        @include mq(tablet-landscape-up){
             padding: 50px 16px 100px 16px;
 
             .section-header{

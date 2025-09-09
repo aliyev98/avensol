@@ -17,15 +17,10 @@ body .card-header {
   background: #272729;
   padding: 8px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .topbar {
     justify-content: center;
     padding: 8px 16px;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .topbar {
-    padding: 8px 100px;
   }
 }
 .topbar a {
@@ -38,6 +33,7 @@ body .card-header {
   color: var(--Neutral-colors-White, #FFF);
   font-size: 12px;
   font-weight: 400;
+  text-wrap: nowrap;
 }
 
 header {
@@ -46,9 +42,15 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
+  header {
+    padding: 8px 50px;
+  }
+}
+@media only screen and (max-width: 1024px) {
   header {
     justify-content: space-between;
+    padding: 8px 100px;
   }
   header nav {
     display: none;
@@ -102,6 +104,8 @@ header nav .nav-tabs .nav-item .dropdown-menu,
 header nav .nav-tabs .dropdown .dropdown-menu {
   padding: 32px 24px;
   min-width: 307px;
+  overflow: visible;
+  transition: min-width 0.5s ease, padding-right 0.25s ease;
   border: none;
 }
 header nav .nav-tabs .nav-item .dropdown-menu .dropdown-item,
@@ -111,16 +115,26 @@ header nav .nav-tabs .dropdown .dropdown-menu .dropdown-item {
   align-items: center;
   flex-direction: "row";
   gap: 0;
-  padding: 12px;
   color: rgba(1, 2, 3, 0.7);
+  padding: 12px;
   font-size: 16px;
   font-weight: 500;
   border-radius: 6px;
   transition: all 0.5s ease-in;
+  transform-origin: left center;
+  will-change: transform;
+  background-color: white;
 }
 header nav .nav-tabs .nav-item .dropdown-menu .dropdown-item:hover,
 header nav .nav-tabs .dropdown .dropdown-menu .dropdown-item:hover {
-  background: var(--Neutral-colors-Light-Gray-15, rgba(190, 190, 190, 0.15));
+  transform: scaleX(1.1);
+}
+header nav .nav-tabs .nav-item .dropdown-menu:has(.dropdown-item:hover),
+header nav .nav-tabs .nav-item .dropdown-menu:has(.dropdown-item:focus-visible),
+header nav .nav-tabs .dropdown .dropdown-menu:has(.dropdown-item:hover),
+header nav .nav-tabs .dropdown .dropdown-menu:has(.dropdown-item:focus-visible) {
+  min-width: 340.77px;
+  padding-right: 32px;
 }
 header nav .dropdown-toggle::after {
   display: none;
@@ -232,7 +246,7 @@ footer .footer-bottom div a {
   text-decoration: none;
   cursor: pointer !important;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   footer {
     padding: 32px 16px !important;
     gap: 0;
@@ -259,6 +273,7 @@ footer .footer-bottom div a {
 .bottom-bar {
   padding: 16px 200px !important;
   background: #272729;
+  gap: 20px;
 }
 .bottom-bar div {
   gap: 72px;
@@ -289,7 +304,16 @@ footer .footer-bottom div a {
   cursor: pointer;
   z-index: 9;
 }
-@media only screen and (max-width: 768px) {
+.bottom-bar .created-by-div img {
+  width: 25px;
+  height: 20px;
+}
+@media only screen and (max-width: 1200px) {
+  .bottom-bar {
+    padding: 16px 16px !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
   .bottom-bar {
     flex-direction: column;
     padding: 16px !important;
@@ -298,10 +322,6 @@ footer .footer-bottom div a {
   .bottom-bar .privacy-and-policy {
     order: -1;
   }
-}
-.bottom-bar .created-by-div img {
-  width: 25px;
-  height: 20px;
 }
 
 .section-header {
@@ -323,7 +343,7 @@ footer .footer-bottom div a {
   font-weight: 500;
   line-height: 140%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .section-title {
     text-align: center;
   }
@@ -336,7 +356,7 @@ footer .footer-bottom div a {
   font-weight: 400;
   line-height: 20px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .section-description {
     text-align: center;
   }
@@ -421,7 +441,7 @@ footer .footer-bottom div a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .feature-cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -473,7 +493,7 @@ footer .footer-bottom div a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .icon-heading-cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -546,7 +566,10 @@ footer .footer-bottom div a {
   width: 690px;
   height: 100%;
 }
-@media only screen and (max-width: 768px) {
+.page-intro-card .section-image .section-img {
+  border-radius: 0;
+}
+@media only screen and (max-width: 1024px) {
   .page-intro-card {
     flex-direction: column;
   }
@@ -614,7 +637,7 @@ footer .footer-bottom div a {
   display: flex;
   gap: 8px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .pagination-bar ul {
     margin-right: auto;
   }
@@ -737,7 +760,7 @@ footer .footer-bottom div a {
   font-weight: 400;
   line-height: 20px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .image-text-card {
     flex-direction: column;
     gap: 32px;
@@ -771,7 +794,7 @@ footer .footer-bottom div a {
   height: 428px;
   overflow: hidden;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .text-image-card {
     gap: 32px;
     flex-direction: column;
@@ -804,7 +827,7 @@ footer .footer-bottom div a {
 .media-checklist-card {
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .media-checklist-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -912,7 +935,7 @@ footer .footer-bottom div a {
   font-size: 14px;
   font-weight: 400;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .homepage-container .hero-section .hero-content {
     width: 100%;
     top: 50%;
@@ -935,7 +958,7 @@ footer .footer-bottom div a {
 .homepage-container .where-we-do .section-title {
   text-align: center;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .homepage-container .where-we-do {
     padding: 50px 16px;
   }
@@ -946,7 +969,7 @@ footer .footer-bottom div a {
 .homepage-container .what-we-do .section-title {
   text-align: center;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .homepage-container .what-we-do {
     padding: 50px 16px;
   }
@@ -956,7 +979,7 @@ footer .footer-bottom div a {
   padding: 100px 200px;
   gap: 50px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .homepage-container .values-and-sustainability {
     padding: 70px 16px;
     flex-direction: column;
@@ -965,7 +988,7 @@ footer .footer-bottom div a {
 .homepage-container .values-and-sustainability .section-intro {
   width: 30%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .homepage-container .values-and-sustainability .section-intro {
     justify-content: center;
     align-items: center;
@@ -976,7 +999,7 @@ footer .footer-bottom div a {
   width: 70%;
   gap: 24px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .homepage-container .values-and-sustainability .icon-heading-cards {
     width: 100%;
   }
@@ -1056,7 +1079,7 @@ footer .footer-bottom div a {
   padding: 8px 16px;
   gap: 10px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .homepage-container .our-news-section {
     padding: 50px 16px;
     flex-direction: column;
@@ -1096,7 +1119,7 @@ footer .footer-bottom div a {
   gap: 32px;
   width: 50%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .values-and-sustainability-container .sustainabilty-practise {
     padding: 50px 16px;
   }
@@ -1117,7 +1140,7 @@ footer .footer-bottom div a {
 .who-we-are-container .our-identity-vision {
   padding: 100px 200px 50px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .who-we-are-container .our-identity-vision {
     padding: 50px 16px;
   }
@@ -1144,7 +1167,7 @@ footer .footer-bottom div a {
 .who-we-are-container .our-team .section-body .section-image {
   width: 50%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .who-we-are-container .our-team {
     padding: 32px 16px;
   }
@@ -1165,7 +1188,7 @@ footer .footer-bottom div a {
 .ethics-and-governence-container .foundation-of-every-decision {
   padding: 100px 200px 50px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .ethics-and-governence-container .foundation-of-every-decision {
     padding: 50px 16px;
   }
@@ -1180,7 +1203,7 @@ footer .footer-bottom div a {
 .ethics-and-governence-container .core-values .section-body .section-image {
   width: 50%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .ethics-and-governence-container .core-values {
     padding: 50px 16px 100px 16px;
   }
@@ -1202,7 +1225,7 @@ footer .footer-bottom div a {
 .our-purpose-container .renewable-energy {
   padding: 100px 200px 50px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .our-purpose-container .renewable-energy {
     padding: 50px 16px;
   }
@@ -1237,7 +1260,7 @@ footer .footer-bottom div a {
   font-weight: 400;
   line-height: 20px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .our-purpose-container .power-change {
     padding: 50px 16px 100px 16px;
   }
@@ -1267,7 +1290,7 @@ footer .footer-bottom div a {
   gap: 24px;
   width: 50%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .principles-container .core-principles {
     padding: 32px 16px;
   }
@@ -1298,7 +1321,7 @@ footer .footer-bottom div a {
        column-gap: 24px;
   row-gap: 50px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .catalogues-container .catalogue-cards-container {
     padding: 50px 16px;
   }
@@ -1313,7 +1336,7 @@ footer .footer-bottom div a {
   -moz-column-gap: 16px;
        column-gap: 16px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .gallery-container .gallery {
     -moz-column-count: 1;
          column-count: 1;
@@ -1372,7 +1395,7 @@ footer .footer-bottom div a {
        column-gap: 24px;
   row-gap: 50px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .news-page-container .news-section {
     padding: 100px 16px;
   }
@@ -1458,7 +1481,7 @@ footer .footer-bottom div a {
   display: flex;
   gap: 24px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .news-details-page-container .news-header {
     padding: 50px 16px;
   }
@@ -1543,7 +1566,7 @@ footer .footer-bottom div a {
   max-height: 100% !important;
   border: 0;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .social-media-page-container .latest-linkedin-feeds {
     padding: 72px 16px;
   }
@@ -1558,7 +1581,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .solar-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1566,7 +1589,7 @@ footer .footer-bottom div a {
 .solar-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .solar-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1575,7 +1598,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .solar-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1585,7 +1608,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .wind-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1593,7 +1616,7 @@ footer .footer-bottom div a {
 .wind-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .wind-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1602,7 +1625,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .wind-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1612,7 +1635,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .hydro-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1620,7 +1643,7 @@ footer .footer-bottom div a {
 .hydro-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .hydro-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1629,7 +1652,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .hydro-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1639,7 +1662,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .transmission-networks-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1647,7 +1670,7 @@ footer .footer-bottom div a {
 .transmission-networks-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .transmission-networks-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1656,7 +1679,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .transmission-networks-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1666,7 +1689,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .energy-storage-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1674,7 +1697,7 @@ footer .footer-bottom div a {
 .energy-storage-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .energy-storage-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1683,7 +1706,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .energy-storage-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1693,7 +1716,7 @@ footer .footer-bottom div a {
   padding: 100px 200px 50px 200px;
   gap: 32px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .data-centers-page-container .left-bordered-cards {
     padding: 50px 16px;
   }
@@ -1701,7 +1724,7 @@ footer .footer-bottom div a {
 .data-centers-page-container .text-image-card {
   padding: 50px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .data-centers-page-container .text-image-card {
     padding: 50px 16px;
   }
@@ -1710,7 +1733,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .data-centers-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1830,7 +1853,7 @@ footer .footer-bottom div a {
   width: 100%;
   height: 100%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .contact-us-page-container .contact-us-form-container {
     padding: 50px 16px;
   }
@@ -1899,7 +1922,7 @@ footer .footer-bottom div a {
   font-weight: 400;
   line-height: 20px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .privacy-policy-page-container .text-content {
     padding: 50px 16px;
   }
@@ -1936,7 +1959,7 @@ footer .footer-bottom div a {
 .not-found-page-container .centered-div .image-for-phone {
   display: none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .not-found-page-container .centered-div-header .title {
     text-align: center;
   }
@@ -1954,7 +1977,7 @@ footer .footer-bottom div a {
 .epc-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .epc-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -1968,7 +1991,7 @@ footer .footer-bottom div a {
 .epc-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .epc-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -1981,7 +2004,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .epc-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -1996,7 +2019,7 @@ footer .footer-bottom div a {
 .project-management-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .project-management-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -2010,7 +2033,7 @@ footer .footer-bottom div a {
 .project-management-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .project-management-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -2023,7 +2046,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .project-management-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -2038,7 +2061,7 @@ footer .footer-bottom div a {
 .procurement-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .procurement-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -2052,7 +2075,7 @@ footer .footer-bottom div a {
 .procurement-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .procurement-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -2065,7 +2088,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .procurement-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -2080,7 +2103,7 @@ footer .footer-bottom div a {
 .consulting-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
   .consulting-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -2094,7 +2117,7 @@ footer .footer-bottom div a {
 .consulting-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .consulting-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -2107,7 +2130,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .consulting-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -2122,7 +2145,7 @@ footer .footer-bottom div a {
 .operating-maintance-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .operating-maintance-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -2136,7 +2159,7 @@ footer .footer-bottom div a {
 .operating-maintance-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .operating-maintance-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -2149,7 +2172,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .operating-maintance-page-container .feature-cards-section {
     padding: 50px 16px;
   }
@@ -2164,7 +2187,7 @@ footer .footer-bottom div a {
 .investment-page-container .icon-text-cards-section .icon-text-cards {
   gap: 16px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .investment-page-container .icon-text-cards-section {
     padding: 50px 16px;
   }
@@ -2178,7 +2201,7 @@ footer .footer-bottom div a {
 .investment-page-container .text-image-card .section-intro .section-title {
   text-align: left;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .investment-page-container .text-image-card {
     padding: 50px 16px;
     flex-direction: column;
@@ -2191,7 +2214,7 @@ footer .footer-bottom div a {
   gap: 32px;
   padding: 50px 200px 100px 200px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .investment-page-container .feature-cards-section {
     padding: 50px 16px;
   }

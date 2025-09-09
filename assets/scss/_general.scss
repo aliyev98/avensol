@@ -20,7 +20,7 @@
     font-weight: 500;
     line-height: 140%;
 
-    @include mq(tablet-portrait-up) {
+    @include mq(tablet-landscape-up) {
         text-align: center;
     }
 }
@@ -32,7 +32,7 @@
     font-weight: 400;
     line-height: 20px;
 
-    @include mq(tablet-portrait-up) {
+    @include mq(tablet-landscape-up) {
         text-align: center;
     }
 }
@@ -93,7 +93,6 @@
 }
 
 .custom-button {
-
     display: flex;
     align-items: center;
     gap: 10px;

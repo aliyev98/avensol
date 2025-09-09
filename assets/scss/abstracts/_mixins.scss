@@ -19,7 +19,7 @@
 
     @else if $size ==lg-down {
 
-        @media only screen and (max-width: 991.98px) {
+        @media only screen and (max-width: 992px) {
             @content;
         }
 

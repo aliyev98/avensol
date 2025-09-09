@@ -55,7 +55,7 @@
             }
         }
 
-        @include mq(tablet-portrait-up) {
+        @include mq(tablet-landscape-up) {
             padding: 72px 16px;
 
             .feeds {

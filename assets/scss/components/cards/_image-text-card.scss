@@ -42,7 +42,7 @@
 
     }
 
-    @include mq(tablet-portrait-up){
+    @include mq(tablet-landscape-up){
         flex-direction: column;
         gap: 32px;
 

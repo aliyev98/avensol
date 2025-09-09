@@ -55,7 +55,7 @@ footer {
 
     }
 
-    @include mq(tablet-portrait-up) {
+    @include mq(tablet-landscape-up) {
         padding: 32px 16px !important;
         gap: 0;
 

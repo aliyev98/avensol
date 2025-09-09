@@ -18,9 +18,13 @@
         width: 690px;
         height: 100%;
 
+        .section-img{
+            border-radius: 0;
+        }
+
     }
 
-    @include mq(tablet-portrait-up) {
+    @include mq(tablet-landscape-up) {
         flex-direction: column;
 
         .section-image {
