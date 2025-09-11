@@ -3,13 +3,19 @@
 .media-checklist-card {
 
     padding: 50px 200px 100px 200px;
+    align-items: stretch;
 
     @include mq(tablet-landscape-up) {
         padding: 50px 16px;
         flex-direction: column;
     }
 
+    .section-image{
+        max-height: 400px;
+    }
+
     .section-card-side {
+        height: fit-content;
 
         .container-header {
             margin-bottom: 24px;

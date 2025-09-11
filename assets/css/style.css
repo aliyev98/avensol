@@ -232,6 +232,8 @@ footer .footer-top span {
 footer .footer-bottom {
   z-index: 9;
   gap: 100px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 50px;
 }
 footer .footer-bottom div {
   gap: 12px;
@@ -828,12 +830,20 @@ footer .footer-bottom div a {
 
 .media-checklist-card {
   padding: 50px 200px 100px 200px;
+  align-items: stretch;
 }
 @media only screen and (max-width: 1024px) {
   .media-checklist-card {
     padding: 50px 16px;
     flex-direction: column;
   }
+}
+.media-checklist-card .section-image {
+  max-height: 400px;
+}
+.media-checklist-card .section-card-side {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .media-checklist-card .section-card-side .container-header {
   margin-bottom: 24px;

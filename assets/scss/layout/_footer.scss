@@ -34,6 +34,8 @@ footer {
     .footer-bottom {
         z-index: 9;
         gap: 100px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+        padding-bottom: 50px;
 
         div {
             gap: 12px;
