@@ -1214,6 +1214,12 @@ footer .footer-bottom div a {
     flex-direction: column;
     gap: 32px !important;
   }
+  .who-we-are-container .our-team .section-body .text-content {
+    width: 100% !important;
+  }
+  .who-we-are-container .our-team .section-body .section-image {
+    width: 100% !important;
+  }
 }
 
 .ethics-and-governence-container .foundation-of-every-decision {
