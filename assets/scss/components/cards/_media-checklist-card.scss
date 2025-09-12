@@ -5,13 +5,9 @@
     padding: 50px 200px 100px 200px;
     align-items: stretch;
 
-    @include mq(tablet-landscape-up) {
-        padding: 50px 16px;
-        flex-direction: column;
-    }
-
-    .section-image{
+    .section-image {
         max-height: 400px;
+        padding: 0;
     }
 
     .section-card-side {
@@ -51,6 +47,15 @@
                 }
             }
 
+        }
+    }
+
+    @include mq(tablet-landscape-up) {
+        padding: 50px 16px;
+        flex-direction: column;
+
+        .section-image {
+            height: 300px;
         }
     }
 }

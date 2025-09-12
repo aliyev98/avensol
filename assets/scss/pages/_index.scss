@@ -5,9 +5,20 @@
     .hero-section {
         position: relative;
         height: 585px;
+        overflow: hidden;
 
-        img {
-            @include img()
+        iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* Cover tekniği: 16:9 oranını koruyarak alanı tamamen doldur */
+            width: 100vw; // genişlik tabanlı
+            height: 56.25vw; // 9/16 * 100 (16:9 yükseklik)
+            min-width: 177.78%; // bazı oranlarda yatayda garanti kaplama
+            min-height: 100%; // dikeyde garanti kaplama
+            transform: translate(-50%, -50%);
+            pointer-events: none; // tıklamalar üst içerikten geçsin
+
         }
 
         .hero-content {
@@ -15,6 +26,7 @@
             top: 50%;
             left: 20%;
             transform: translate(-20%, -50%);
+            z-index: 1;
 
             span {
                 color: var(--Neutral-colors-White, #FFF);
@@ -27,6 +39,13 @@
                 font-size: 14px;
                 font-weight: 400;
             }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .45));
         }
 
         @include mq(tablet-landscape-up) {

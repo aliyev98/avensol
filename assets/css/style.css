@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: 0;
@@ -832,14 +833,9 @@ footer .footer-bottom div a {
   padding: 50px 200px 100px 200px;
   align-items: stretch;
 }
-@media only screen and (max-width: 1024px) {
-  .media-checklist-card {
-    padding: 50px 16px;
-    flex-direction: column;
-  }
-}
 .media-checklist-card .section-image {
   max-height: 400px;
+  padding: 0;
 }
 .media-checklist-card .section-card-side {
   height: -moz-fit-content;
@@ -873,6 +869,15 @@ footer .footer-bottom div a {
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .media-checklist-card {
+    padding: 50px 16px;
+    flex-direction: column;
+  }
+  .media-checklist-card .section-image {
+    height: 300px;
+  }
 }
 
 .input-with-label {
@@ -924,18 +929,26 @@ footer .footer-bottom div a {
 .homepage-container .hero-section {
   position: relative;
   height: 585px;
+  overflow: hidden;
 }
-.homepage-container .hero-section img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.homepage-container .hero-section iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Cover tekniği: 16:9 oranını koruyarak alanı tamamen doldur */
+  width: 100vw;
+  height: 56.25vw;
+  min-width: 177.78%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 .homepage-container .hero-section .hero-content {
   position: absolute;
   top: 50%;
   left: 20%;
   transform: translate(-20%, -50%);
+  z-index: 1;
 }
 .homepage-container .hero-section .hero-content span {
   color: var(--Neutral-colors-White, #FFF);
@@ -946,6 +959,12 @@ footer .footer-bottom div a {
   color: var(--Neutral-colors-White, #FFF);
   font-size: 14px;
   font-weight: 400;
+}
+.homepage-container .hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
 }
 @media only screen and (max-width: 1024px) {
   .homepage-container .hero-section .hero-content {
