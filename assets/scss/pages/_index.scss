@@ -11,13 +11,12 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            /* Cover tekniği: 16:9 oranını koruyarak alanı tamamen doldur */
-            width: 100vw; // genişlik tabanlı
-            height: 56.25vw; // 9/16 * 100 (16:9 yükseklik)
-            min-width: 177.78%; // bazı oranlarda yatayda garanti kaplama
-            min-height: 100%; // dikeyde garanti kaplama
+            width: 100%;
+            height: 56.25vw;
+            min-width: 100%; 
+            min-height: 100%;
             transform: translate(-50%, -50%);
-            pointer-events: none; // tıklamalar üst içerikten geçsin
+            pointer-events: none;
 
         }
 

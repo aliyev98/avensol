@@ -5,6 +5,10 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top: 40px;
+    z-index: 9;
+    background-color: #fff;
 
     @include mq(desktop-up) {
         padding: 8px 50px;
