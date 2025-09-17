@@ -972,6 +972,15 @@ footer .footer-bottom div a {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
 }
 @media only screen and (max-width: 1024px) {
+  .homepage-container .hero-section iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 225vh;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
   .homepage-container .hero-section .hero-content {
     width: 100%;
     top: 50%;
@@ -1479,10 +1488,9 @@ footer .footer-bottom div a {
   justify-content: center;
 }
 .news-details-page-container .news-image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 80%;
-  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 60%;
 }
 .news-details-page-container .news-image-phone {
   display: none;

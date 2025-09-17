@@ -39,9 +39,8 @@
         justify-content: center;
         
         img {
-            object-fit: cover;
-            width: 80%;
-            height: 100%;
+            object-fit: contain;
+            width: 60%;
         }
     }
 
