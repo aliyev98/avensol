@@ -1474,12 +1474,14 @@ footer .footer-bottom div a {
 }
 .news-details-page-container .news-image {
   padding: 0 200px;
-  height: 260px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .news-details-page-container .news-image img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
+  width: 80%;
   height: 100%;
 }
 .news-details-page-container .news-image-phone {
